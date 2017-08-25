@@ -1,0 +1,1967 @@
+  
+            /**** FONT: OPEN SANS ***/
+            *
+            {
+                font-family: font114865, "HelveticaLight","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+                font-weight: 300;
+               /* font-family: 'Open Sans', sans-serif;*/
+            }
+
+#chart-container {
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
+	margin: 0 auto
+}
+            /*** Common Usage ***/
+
+            a.text-decoration-none:hover
+            {
+                text-decoration: none !important;
+            }
+            
+            /*** Too highlight current day on calender ***/
+
+            .responsive-calendar .day.today a {
+                    background: lightgray;
+                    color: black; 
+            }
+       
+            
+            /** CUSTOM NAVIGATION BAR **/
+                    .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+                    color: white;  /*Sets the text hover color on navbar*/
+                    }
+
+                    .navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active >   
+                     a:hover, .navbar-default .navbar-nav > .active > a:focus {
+                    color: white; /*BACKGROUND color for active*/
+                    background-color: #030033;
+                    }
+
+                    .navbar-custom {
+                        background-color: transparent;
+                        border-color: transparent;
+                        color:white;
+                        /* Custom NAV margin settings */
+                        margin-bottom: 0;
+                        padding-top: 4%;
+               
+                        
+                    }
+
+                      .dropdown-menu > li > a:hover,
+                       .dropdown-menu > li > a:focus {
+                        color: #262626;
+                       text-decoration: none;
+                      background-color: #66CCFF;  /*change color of links in drop down here*/
+                       }
+
+                     .nav > li > a:hover,
+                     .nav > li > a:focus {
+                        text-decoration: none;
+                        background-color: silver; /*Change rollover cell color here*/
+                      }
+
+
+                      .navbar-custom .navbar-nav > li > a {
+                       color: white; /*Change active text color here*/
+                        }
+            
+                    .navbar-custom .navbar-brand {
+                          color: white;
+                        }
+                        .navbar-custom .navbar-brand:hover,
+                        .navbar-custom .navbar-brand:focus {
+                          color: #5e5e5e;
+                          background-color: transparent;
+                        }
+            
+            
+                  /*** Brand Name padding settings ***/
+            .brand
+            {
+            padding-left: 5%;
+         
+            }
+            
+            /* For sign up page */
+            .brand-1
+            {
+            padding-left: 7%;
+         
+            }
+            
+            .brand-font
+            {
+            font-size: 35px;
+            font-weight: 1000;
+            }
+            
+
+            
+            tr:hover > td > span >button
+            {
+                visibility: visible !important;
+            }   
+
+             tr:hover > td > span 
+            {
+                visibility: visible !important;
+            } 
+            
+            
+            
+            
+             /** CUSTOM NAVIGATION BAR 1 **/
+                    .navbar-custom-1 .navbar-nav > li > a:hover, .navbar-custom-1 .navbar-nav > li > a:focus {
+                    color: white;  /*Sets the text hover color on navbar*/
+                    }
+
+                    .navbar-custom-1 .navbar-nav > .active > a, .navbar-custom-1 .navbar-nav > .active >   
+                     a:hover, .navbar-custom-1 .navbar-nav > .active > a:focus {
+                    color: white; /*BACKGROUND color for active*/
+                    background-color: #030033;
+                    }
+
+                    .navbar-custom-1 {
+                        background-color: #347AB6;
+                        border-color: transparent;
+                        color:white;
+                        /* Custom NAV margin settings */
+                        margin-bottom: 0;
+                        padding-top: 2%;
+               
+                        
+                    }
+
+                      .dropdown-menu > li > a:hover,
+                       .dropdown-menu > li > a:focus {
+                        color: #262626;
+                       text-decoration: none;
+                      background-color: #66CCFF;  /*change color of links in drop down here*/
+                       }
+
+                     .nav > li > a:hover,
+                     .nav > li > a:focus {
+                        text-decoration: none;
+                        background-color: silver; /*Change rollover cell color here*/
+                      }
+
+
+                      .navbar-custom-1 .navbar-nav > li > a {
+                       color: white; /*Change active text color here*/
+                        }
+            
+                    .navbar-custom-1 .navbar-brand {
+                          color: white;
+                        }
+                        .navbar-custom-1 .navbar-brand:hover,
+                        .navbar-custom-1 .navbar-brand:focus {
+                          color: #5e5e5e;
+                          background-color: transparent;
+                        }
+            
+            
+            
+
+               
+
+            
+         
+          /*          table {
+                      border-collapse: separate;
+                      border-spacing: 0 1em;
+                    }*/
+
+            /*        td {
+                      border-right: 1px solid #000;
+                      padding: 0 10px;
+                      width:28%;
+                    }
+
+                    tr td:last-child {
+                      border-right: 0px solid #000;
+                        
+                    }
+
+*/
+
+            
+            td{width:28%;}
+
+     
+
+            
+            /*** Custom Log in Button ***/
+    
+          
+            
+               .ques-btn,.ques-btn-mult : hover{
+                padding: 1%;
+                margin-bottom: 3%;
+            border: 1px solid #347AB6;
+                font-weight: 350;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                background: transparent;
+                color:white;
+                
+               
+           
+            }
+            
+            
+            /** Questionnaire buttons settings **/
+            .ques-btn , .ques-btn-mult {
+                padding: 1%;
+                margin-bottom: 3%;
+                font-weight: 350;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                background: transparent;
+                color:black;
+                outline:none;
+                border: 1px solid transparent;
+                font-size: 15px;
+            }
+            
+            .ques-btn-selected 
+            {
+                padding: 1%;
+                margin-bottom: 3%;
+                border: 1px solid #347AB6;
+                font-weight: 350;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                background: transparent;
+                color:#347AB6;
+            }
+            
+            /*** overide navbar btn ***/
+            .navbar-btn
+            {
+                outline: none;
+                
+            }
+            
+            /* Overwrite for sign up page */
+            .btn-1 {
+                margin-bottom: 2%;
+            }
+            
+            .btn-2 {
+                margin-top: 3%;
+                 padding: 1% 5%;
+
+       
+                font-weight: 350;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+  
+                color:white;
+                
+                border: 1px solid #347AB6;
+                background: white;
+                color:#347AB6;
+                margin-bottom: 2%;
+                
+                
+                 text-align: center;
+                  white-space: nowrap;
+                  vertical-align: middle;
+                  -ms-touch-action: manipulation;
+                      touch-action: manipulation;
+                  cursor: pointer;
+                  -webkit-user-select: none;
+                     -moz-user-select: none;
+                      -ms-user-select: none;
+                          user-select: none;
+                  background-image: none;
+                  border-radius: 4px;
+                
+            }
+            
+            .btn-2 p {
+                display: inline-block;
+                color: #347AB6;
+            }
+
+            .btn-custom:focus, .btn-custom:active:focus, .btn-custom.active:focus {
+                outline: 0 none;
+            }
+            
+            .ques-btn:focus, .ques-btn:active:focus, .ques-btn.active:focus {
+                outline: 0 none;
+            }
+
+      
+
+            .btn-2:hover, .btn-2:focus, .btn-2:active, .btn-2.active, .open > .dropdown-toggle.btn-2 {
+                background: #347AB6;
+                color: white;
+                
+            }
+            
+            .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open > .dropdown-toggle.btn-custom {
+                background: white;
+                color:#347AB6;
+            }
+            
+            .ques-btn:hover, .ques-btn:focus, .ques-btn:active, .ques-btn.active, .open > .dropdown-toggle.ques-btn {
+                background: white;
+                color:#347AB6;
+                  border: 1px solid #347AB6;
+            }
+
+            .btn-custom:active, .btn-custom.active {
+                background: white;
+                color:#347AB6;
+                box-shadow: none;
+            }
+             .ques-btn:active, .ques-btn.active {
+                background: white;
+                color:#347AB6;
+                box-shadow: none;
+            }
+            
+            
+            
+            
+            
+            /*** Log in Button padding settings ***/
+            .button-login
+            {
+            padding-right: 5%;
+            width:100%;
+            }
+            
+            .button-login-1
+            {
+            padding-right: 7%;
+            width:100%;
+            }
+            
+            
+        
+                     
+            
+            
+            
+            
+            /*** Intro section styling ***/
+            div#intro
+            {
+             /* background: url("images/intro-temp.jpg");*/
+                background-size: 100%;
+                background-color: transparent;
+                padding-top: 17%;
+        
+            }
+         
+            
+            
+            
+            /*** Custom Intro Button ***/
+            /*** Custom Log in Button ***/
+    
+            .intro-btn {
+                padding: 1% 1%;
+                border: 1px solid white;
+                font-weight: 250;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .intro-btn:focus, .intro-btn:active:focus, .intro-btn.active:focus {
+                outline: 0 none;
+            }
+
+            .intro-btn {
+                background: transparent;
+                color: #ffffff;
+            }
+
+            .intro-btn:hover, .intro-btn:focus, .intro-btn:active, .intro-btn.active, .open > .dropdown-toggle.intro-btn {
+                background: white;
+                color:#347AB6;
+            }
+
+            .intro-btn:active, .intro-btn.active {
+                background: white;
+                color:#347AB6;
+                box-shadow: none;
+            }
+            
+            .intro-btn-div
+            {
+                padding-bottom: 10%;
+            }
+            
+            .intro-features
+            {
+                background-color: white;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                
+            }
+            
+            
+            .intro-features p.intro-feature-text
+            {
+                width:85%;
+                margin: 0 auto;
+                
+            }
+            
+      
+            
+            
+            
+            .intro-features-bg
+            {
+                background-color: lightgrey;
+            }
+            
+            /*** Background Image for the screen ***/
+           
+                        
+            /*** Background Image for the screen ***/
+           
+            #img-bgg {
+                      position: fixed; 
+                      top: -50%; 
+                      left: -50%; 
+                      width: 200%; 
+                      height: 200%;
+                      /* Opacity Setting to allow text to be readable */
+                      opacity: 0.9;
+                      filter: alpha(opacity=50); /* For IE8 and earlier */
+                      background-color: #347AB6;
+                      
+                    }
+            
+            #img-bgg img {
+                      position: absolute; 
+                      top: 0; 
+                      left: 0; 
+                      right: 0; 
+                      bottom: 0; 
+                      margin: auto; 
+                      min-width: 50%;
+                      min-height: 50%;
+                  
+                   
+                    }
+
+            html, body {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+               
+            /**** Viewport Setting for XS ****/
+             @media only screen and (max-width:768px){
+            /* styles for mobile browsers smaller than 480px; (iPhone) */
+                 
+                 .m-btn-login
+                 {
+                     font-size: 18px !important;
+                 }
+                 .m-drop-tracker
+                 {
+                     margin-top: 5% !important;
+                 }
+                 .m-title-custom
+                 {
+                     font-size:27px !important;
+                 }
+                 
+                 .m-btn-tracker
+                 {
+                     font-size: 12px !important;
+                     padding: 30% !important;
+                     margin-top: 10% !important;
+                    margin-bottom:10% !important;
+                 }
+                 
+                    .m-glyph-return-custom
+                 {
+                     margin-top: 50% !important;
+                 }
+                 
+                   .m-glyph-return-custom + span
+                 {
+                    font-size:14px !important;
+                 }
+                  .m-glyph-return-tracker
+                 {
+                     margin-top: 30% !important;
+                 }
+                 
+                  .m-glyph-return-tracker + span
+                 {
+                    font-size:16px !important;
+                 }
+                 .m-glyph-return-plan
+                 {
+                     margin-top: 45% !important;
+                 }
+                 
+                 .m-glyph-return-plan + span
+                 {
+                     font-size:18px !important;
+                 }
+                 
+                 
+                 .m-plan-day
+                 {
+                     font-size: 26px !important;
+                 }
+                 .m-plan-title
+                 {
+                     font-size: 28px !important;
+                 }
+                 .m-home-desc
+                 {
+                     color: darkgray !important;
+                 }
+                      .m-home-features-each
+            {
+                
+                padding-top:5% ;
+                padding-bottom:2%;
+                margin-top: 1%;
+                margin-bottom: 1%;
+ 
+            }
+                 
+                 .m-home-today-btn
+                 {
+                     font-size: 12px !important;
+                     padding: 2.5% !important;
+               
+                     
+                 }
+                 .m-table th
+                 {
+                       font-size: 18px !important;
+                 }
+                 
+                 .m-table td
+                 {
+                       font-size: 15px !important;
+                 }
+                 .m-title-today
+                 {
+                     font-size: 25px !important;
+                     margin-top: -2% !important;
+                 }
+                 
+                 .m-tracker-input-1
+                 {
+                     margin-left: 65% !important;
+                 }
+                 
+                 .m-tracker-input-2
+                 {
+                      margin-left: 45% !important;
+                 }
+                 
+                 .m-tracker-input-3
+                 {
+                      margin-left: 25% !important;
+                 }
+                 
+                 .m-tracker-input-4
+                 {
+                      margin-left: 5% !important;
+                 }
+                 
+                 .m-tracker-input-5
+                 {
+                      margin-left: -15% !important;
+                 }
+                 
+                 
+                 .m-tracker-exercise
+                 {
+                     font-size:20px !important;
+               
+                 }
+                 
+                 .m-tracker-details
+                 {
+                     font-size:14px !important;
+               
+                 }
+                 .m-circle-press
+                 {
+                        width:30px;
+                        height:30px;
+                        border:1px solid #347AB6;
+                        border-radius:50%;
+                        -moz-border-radius:50%;
+                        -webkit-border-radius:50%;
+                        text-align: center;
+                 }
+                 
+                 /*** Override mobile settings for tracker circle ***/
+                 .m-tracker-circle
+                 {
+                     top: 55% !important;
+                     left: 18% !important;
+              
+                 }
+                 
+                 .m-tracker-glyphicon-up
+                 {
+                     top: 20% !important;
+                     left: 20% !important;
+                 }
+                 
+                  .m-tracker-glyphicon-down
+                 {
+                     top: 80% !important;
+                     left: 20% !important;
+                 }
+                 
+                 .m-tracker-right-border
+                 {
+                     border: none !important;
+             
+                  
+                 }
+                 
+                  .m-tracker-border-bottom
+                 {
+         
+                     border-bottom: 1px solid darkgrey !important;
+                 }
+                 
+                 
+                 .m-btn-next
+                 {
+                     padding: 2% !important;
+                 }
+                 
+                 /*** Global settings to hide elements ***/
+                 .d-view
+                 {
+                     visibility: hidden;
+                 }
+                 
+                 .d-display
+                 {
+                     display: none;
+                 }
+                 
+                 /*** CONTROL INPUT GROUP IN XS ***/
+                 .m-input-group
+                 {
+                    width: 60%;
+                 }
+                 
+                 /*** Override Circle padding in XS ***/
+                .m-circle
+                {
+                            height:40px !important;
+                            width:40px !important;
+                            padding-top: 6px !important;
+                }
+
+                 /*** Override Sign Up title in XS ***/
+                 .m-title-signup
+                 {
+                    font-size: 35px !important;
+                    margin-top: 10% !important;
+                 }
+                 
+                 .m-title-login
+                 {
+                     font-size: 32px !important;
+                     margin-top: 8% !important;
+                     margin-bottom: 2% !important;
+                 }
+
+                /*** Override Brand padding left for registrations ***/
+                .m-brand-signup
+                {
+                    margin-left: 0% !important;
+                }
+
+
+                .website-brand
+                {
+                  font-size: 28px !important;
+                  margin-top: -2%;
+                }
+
+                #intro-text
+                {
+                    width:80%;
+                    font-size: 18px;
+                    color: white;
+                    margin: 0 auto;
+                    margin-bottom: 5%;
+                    margin-top: 3%;
+                }
+
+                .d-button-login
+                {
+                    visibility: hidden;
+                }
+
+                .d-button-signup
+                {
+                  display: none !important;
+                }
+
+                .m-navbar-welcome
+                {
+                  margin-top:6%;
+                }
+
+                .m-navbar-login
+                {
+                   margin-top: 1% !important;
+                  margin-bottom: 3% !important;
+                }
+
+            
+ 
+
+                .m-button-login
+                {
+                  font-size: 5px;
+                }
+
+                .m-btn-2
+                {
+                  font-size: 23px !important;
+                  padding: 2.5% !important;
+                  margin-top:7% !important;
+                }
+
+                .m-lgusername
+                {
+                  padding-top: 2% !important;
+                }
+
+                .m-intro-features
+                {
+                  padding-top: 10%; 
+                  padding-bottom:10% ;
+                  border-top: 1px solid darkgray;
+                  border-width: 1px;
+                  font-size: 15px !important;
+
+                }
+          
+
+                .m-form-control-1
+                {
+                  width:100% !important;
+                  line-height: 0 !important;
+                  padding: 0 !important;
+                  height: 28px !important;
+                  font-size: 15px !important;
+                }
+                
+                .m-form-register
+                 {
+                     margin-top: 5% !important;
+                 }
+                 
+             
+            
+
+                .m-global-color
+                {
+                  color:#347AB6;
+                }
+
+                .m-intro-btn
+                {
+                  font-size: 12px !important;
+                  padding: 2% !important;
+                  margin-top: 1% !important;
+                  margin-bottom: 5% !important;
+                }
+
+                .m-footer-text
+                {
+                  font-size: 14px !important;
+                  margin-bottom: 2% !important;
+                }
+
+                .m-social-icons
+                {
+                  font-size:7vw !important;
+                }
+
+
+
+
+            .btn-custom {
+                padding: 2%;
+                margin-bottom: 3%;
+                border: 1px solid white;
+                font-weight: 350;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                background: transparent;
+                color:white;
+                font-size: 12px;
+
+
+                
+               
+           
+            }
+
+            .label-su-dirty-4
+            {
+                position:absolute;
+                margin-left: 3% !important;
+                margin-top: 3.5% !important;
+                font-size:16px;
+            }
+
+
+            .label-su
+            {
+                position:absolute;
+                margin-left: 29%;
+                margin-top: 3.5%;
+                font-size:16px;
+            }
+
+            .d-input
+            {
+              display: none;
+            }
+
+
+
+
+                 
+                
+            }
+            
+
+            .home-features
+            {
+                margin: 0% 2%;
+                margin-bottom: 4%;
+            }
+
+    
+            
+             /**** Viewport Setting for XS and above ****/
+             @media only screen and (min-width:768px){
+                 
+                            .m-display
+                 {
+                    display: none;   
+                 }
+                 
+            /*** To style interface for User's Home Page ***/
+      
+         
+                 
+                     .home-features-each
+            {
+                
+                padding-top:5%;
+                padding-bottom:2%;
+                width: 32.65%;
+            }
+          
+            .home-lr-margin
+            {
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+                 
+                  /**** Slight Animation for Introduction features ****/
+              .btn-custom {
+                padding: 1%;
+                margin-bottom: 3%;
+                border: 1px solid white;
+                font-weight: 350;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                background: transparent;
+                color:white;
+             
+                
+               
+           
+            }
+
+            .m-button-signup
+                {
+                  display: none !important;
+                }
+
+            .m-input
+            {
+              display: none;
+            }
+
+
+            .label-su
+            {
+                position:absolute;
+                margin-left: 35%;
+                margin-top: 1.8%;
+                font-size:16px;
+            }
+            /*** Brand Name padding settings ***/
+                .website-brand
+                {
+                  font-size: 35px;
+                }
+
+             
+
+                .m-button-login
+                {
+                  visibility: hidden;
+                }
+
+
+
+              #intro-text
+              {
+                  
+                  font-size: 22px;
+                  color: white;
+              }
+            
+            /* INTRO-FEATURE-1 : HOVER */
+            div#intro-feature-text-1:hover
+            {
+                width:36%;
+                -webkit-transition: width 1s; /* Safari */
+                transition: width 1s;
+                background-color: lightgrey;
+            }
+     
+            div#intro-feature-text-1:hover ~ div#intro-feature-text-2
+            {
+                width:32%;
+                -webkit-transition: width 1s; /* Safari */
+                transition: width 1s;
+                
+            }
+            
+             div#intro-feature-text-1:hover ~ div#intro-feature-text-3
+            {
+                width:32%;
+                -webkit-transition: width 1s; /* Safari */
+                transition: width 1s;
+                
+            }
+            
+            /* INTRO-FEATURE-2 : HOVER */
+            div.row:hover div.intro-features
+            {
+                width:32%;
+                -webkit-transition: width 1s; /* Safari */
+                transition: width 1s;
+            }
+            
+            div.row div.intro-features:hover,   div.row div.intro-features:hover ~ div.intro-features
+            {
+                 width:36%;
+                -webkit-transition: width 1s; /* Safari */
+                transition: width 1s;
+                
+                
+            }
+            
+            div#intro-feature-text-2:hover ~ div#intro-feature-text-3
+            {
+                width:32%;
+                -webkit-transition: width 1s; /* Safari */
+                transition: width 1s;
+                
+            }
+           
+            /*** CHANGE BACKGROUND COLOUR WHEN HOVERED ***/
+            div.row div.intro-features:hover
+            {
+                background-color: lightgrey;
+            
+            
+            }
+            
+             /*** CHANGE HEADING COLOUR WHEN HOVERED ***/
+             div.row div.intro-features:hover p.h4
+            {
+                color:#347AB6;
+            }
+            
+             /*** CHANGE GLYPHICON COLOUR WHEN HOVERED ***/
+             div.row div.intro-features:hover span.glyphicon
+            {
+                color:#347AB6;
+            }
+            
+            
+             /**** END OF Slight Animation for Introduction features ****/
+            
+                 /**** Slight Animation for Home features ****/
+                 
+                 /*** To style interface for User's Home Page ***/
+
+            .home-features-each
+            {
+                
+                padding-top:5%;
+                padding-bottom:2%;
+                width: 32.65%;
+            }
+            
+            /* HOME-FEATURES-1 : HOVER */
+            div#home-features-1:hover
+            {
+                width:36%;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                background-color: #347AB6;
+                color:white;
+            }
+            
+            div#home-features-1:hover span
+            {
+                color:white;
+                 -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+            
+             div#home-features-2:hover span
+            {
+                color:white;
+                 -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+            
+             div#home-features-3:hover span
+            {
+                color:white;
+                 -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+            div#home-features-1:hover ~ div#home-features-2
+            {
+                width:31%;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                
+            }
+            
+             div#home-features-1:hover ~ div#home-features-3
+            {
+                width:31%;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                
+            }
+            
+            /* HOME-FEATURE-2 : HOVER */
+            div.row:hover div.home-features-each
+            {
+                width:31%;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+            
+            div.row div.home-features-each:hover,   div.row div.home-features-each:hover ~ div.home-features-each
+            {
+                 width:36%;
+                
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                
+                
+            }
+            
+            div#home-features-2:hover ~ div#home-features-3
+            {
+                width:31%;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                
+            }
+           
+            /*** CHANGE BACKGROUND COLOUR WHEN HOVERED ***/
+            div.row div.home-features-each:hover
+            {
+                background-color: lightgrey;
+                background-color: #347AB6;
+                color:white;
+            
+            
+            }
+            
+             /*** CHANGE HEADING COLOUR WHEN HOVERED ***/
+             div.row div.intro-features:hover p.h4
+            {
+                color:#347AB6;
+            }
+            
+             /*** CHANGE GLYPHICON COLOUR WHEN HOVERED ***/
+             div.row div.intro-features:hover span.glyphicon
+            {
+                color:#347AB6;
+            }
+            
+            }
+          
+
+         
+            
+            
+            /**** END OF Slight Animation for Home features ****/
+            
+                 
+                       .m-tracker-input-1
+                 {
+                     margin-left: 40% !important;
+                 }
+                 
+                 .m-tracker-input-2
+                 {
+                      margin-left: 30% !important;
+                 }
+                 
+                 .m-tracker-input-3
+                 {
+                      margin-left: 20% !important;
+                 }
+                 
+                 .m-tracker-input-4
+                 {
+                      margin-left: 10% !important;
+                 }
+                 
+                 .m-tracker-input-5
+                 {
+                      margin-left: 0% !important;
+                 }
+  
+                   #email, #pass, #repass,#username, #lgusername, #lgpass
+            {
+                padding-top: 2%;
+            }
+                 
+                /*** Global settings to hide elements ***/
+                 .m-view
+                 {
+                     visibility: hidden;
+                 }
+                 
+         
+                 
+           
+
+                 
+              
+                 
+                
+            
+            
+            
+            
+            /**** GLOBAL SETTINGS FOR SIZE OF GLYPHICON ****/
+            .glyphicon {
+                font-size: 35px;
+            }
+            
+            
+            /**** FOOTER SETTINGS ****/
+            .intro-footer
+            {
+                padding-top: 5%;
+                padding-bottom: 5%;
+                background-color: #347AB6;
+                width:100%;
+               
+            
+            }
+            
+            /*** White Border ***/
+            .white-border-bottom
+            {
+              /*  border-bottom: 1px solid white;  */
+            }
+            
+            
+            
+            /*** color-white ***/
+            .color-white
+            {
+                color:white;
+            }
+            
+            @keyframes slideInFromLeft {
+              0% {
+                transform: translateX(-100%);
+              }
+              100% {
+                transform: translateX(0);
+              }
+            }
+
+             .glyphicon{  
+              /* This section calls the slideInFromLeft animation we defined above */
+              animation: 1s ease-out 0s 1 slideInFromLeft;
+
+            }
+            
+            #btn-start
+            {
+                display: none;
+            }
+            
+            .footer-icon
+            {
+                width:5%;
+                
+            }
+            
+            
+       
+            .fa {
+              padding: 0 auto;
+              padding-top: 3%;
+              font-size: 30px;
+              width: 50px;
+              text-align: center;
+              text-decoration: none;
+            }
+
+            .fa:hover {
+                opacity: 0.9;
+                text-decoration: none;
+            }
+
+            .fa-facebook {
+              background: transparent;
+              color: white;
+            }
+
+            .fa-twitter {
+              background: transparent;
+              color: white;
+            }
+
+            .fa-google {
+              background: #dd4b39;
+              color: white;
+            }
+
+            .fa-linkedin {
+              background: #007bb5;
+              color: white;
+            }
+
+            .fa-youtube {
+              background: #bb0000;
+              color: white;
+            }
+
+            .fa-instagram {
+              background: transparent;
+              color: white;
+            }
+
+            .fa-pinterest {
+              background: #cb2027;
+              color: white;
+            }
+
+            .fa-snapchat-ghost {
+              background: #fffc00;
+              color: white;
+              text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            }
+
+            .fa-skype {
+              background: #00aff0;
+              color: white;
+            }
+
+            .fa-android {
+              background: #a4c639;
+              color: white;
+            }
+
+            .fa-dribbble {
+              background: #ea4c89;
+              color: white;
+            }
+
+            .fa-vimeo {
+              background: #45bbff;
+              color: white;
+            }
+
+            .fa-tumblr {
+              background: #2c4762;
+              color: white;
+            }
+
+            .fa-vine {
+              background: #00b489;
+              color: white;
+            }
+
+            .fa-foursquare {
+              background: #45bbff;
+              color: white;
+            }
+
+            .fa-stumbleupon {
+              background: #eb4924;
+              color: white;
+            }
+
+            .fa-flickr {
+              background: #f40083;
+              color: white;
+            }
+
+            .fa-yahoo {
+              background: #430297;
+              color: white;
+            }
+
+            .fa-soundcloud {
+              background: #ff5500;
+              color: white;
+            }
+
+            .fa-reddit {
+              background: #ff5700;
+              color: white;
+            }
+
+            .fa-rss {
+              background: #ff6600;
+              color: white;
+            }
+
+            
+            /* Align block elements to the center */
+            .align-center
+            {
+                margin: 0 auto;
+            }
+            
+            /*** Circle border for sign up page ***/
+            .circle-current {
+                            color:#347AB6;
+                            background-color:lightgrey;
+                            border:1px solid #347AB6;    
+                            height:50px;
+                            border-radius:50%;
+                            -moz-border-radius:50%;
+                            -webkit-border-radius:50%;
+                            width:50px;
+                            display:inline-block;
+                            padding-top: 11px;
+                    }
+            
+            .circle-done {
+                            color: white;
+                            background-color:#347AB6;
+                            border:1px solid #347AB6;    
+                            height:50px;
+                            border-radius:50%;
+                            -moz-border-radius:50%;
+                            -webkit-border-radius:50%;
+                            width:50px;
+                            display:inline-block;
+                            padding-top: 11px;
+                    }
+
+            .circle-button{
+                            color: white;
+                            background-color:#347AB6;
+                            border:1px solid #347AB6;    
+                            height:25px;
+                            border-radius:50%;
+                            -moz-border-radius:50%;
+                            -webkit-border-radius:50%;
+                            width:25px;
+                            margin-top: 10%;
+                          
+                    }
+            
+             .glyphicon-absolute {
+                     
+                    
+                            height:50px;
+                            border-radius:50%;
+                            -moz-border-radius:50%;
+                            -webkit-border-radius:50%;
+                            width:50px;
+                            display:inline-block;
+                            padding-top: 11px;
+                            margin-left:12%;
+                    }
+            
+             .circle-empty {
+                            color: black;
+                          /*  background-color:#347AB6;*/
+                          /*  border:1px solid #347AB6;    */
+                            height:50px;
+                       /*     border-radius:50%;
+                            -moz-border-radius:50%;
+                            -webkit-border-radius:50%;*/
+                            width:50px;
+                            display:inline-block;
+                            padding-top: 1.5%;
+                    }
+            
+            .circle-default {
+                            color:#347AB6;
+                            background-color:white;
+                            border:1px solid #347AB6;    
+                            height:50px;
+                            border-radius:50%;
+                            -moz-border-radius:50%;
+                            -webkit-border-radius:50%;
+                            width:50px;
+                            display:inline-block;
+                            padding-top: 11px;
+                        }
+            
+            
+             
+            .circle-default {
+                            color:#347AB6;
+                            background-color:white;
+                            border:1px solid #347AB6;    
+                            height:50px;
+                            border-radius:50%;
+                            -moz-border-radius:50%;
+                            -webkit-border-radius:50%;
+                            width:50px;
+                            display:inline-block;
+                            padding-top: 11px;
+                        }
+            
+            
+            .glyphicon-chevron-right
+            {
+                color:#347AB6;
+                display: inline-block;
+                top: 2px;
+                font-size: 20px;
+            }
+            
+            /* Font size for registration status */
+            .reg-stat
+            {
+                font-size: 18px;
+            }
+            
+            /* Sign Up Text */
+            .sign-up
+            {
+                font-size:45px;     
+                font-weight: 200;
+                margin-bottom: 2%;
+            }
+            
+            
+            
+            
+            .form-control-1 {
+               display: block;
+              margin: 0 auto;
+              width: 30%;
+              height: 50px;
+              padding: 6px 12px;
+              font-size: 18px;
+              line-height: 1.42857143;
+              color: #555;
+              background-color: transparent;
+              background-image: none;
+              border-color:transparent;
+              border:0px solid black ;
+              border-bottom: 1px solid black;
+              transition: width 1s;
+              outline: none;
+              
+
+
+            }
+            
+            .form-control-2 {
+               display: block;
+              margin: 0 auto;
+              width: 30%;
+              height: 50px;
+              padding: 6px 12px;
+              font-size: 18px;
+              line-height: 1.42857143;
+              color: #555;
+              background-color: transparent;
+              background-image: none;
+              border-color:transparent;
+              border:0px solid black ;
+              border-bottom: 1px solid black;
+              transition: width 1s;
+              outline: none;
+              bottom:5;
+
+
+            }
+            
+            /*.form-control-1: focus {
+              display: block;
+              margin: 0 auto;
+              width: 40%;
+              height: 34px;
+              padding: 6px 12px;
+              font-size: 14px;
+              line-height: 1.42857143;
+              color: #555;
+              background-color: transparent;
+              background-image: none;
+              border-color:transparent;
+              border:0px solid black ;
+              border-bottom: 1px solid #347AB6;
+              transition: width .5s ease, border-color .5s ease;
+              outline: none;
+
+
+            }*/
+
+            .form-control-1: not(:focus) {
+              display: block;
+              margin: 0 auto;
+              width: 30%;
+              height: 34px;
+              padding: 6px 12px;
+              font-size: 14px;
+              line-height: 1.42857143;
+              color: #555;
+              background-color: transparent;
+              background-image: none;
+              border-color:transparent;
+              border:0px solid black ;
+              border-bottom: 1px solid #347AB6;
+              transition: width 1s;
+              outline: none;
+
+            }
+
+
+            
+            *:focus
+            {
+                outline:none;
+                outline-width:0px;
+                border-bottom: 2px solid #347AB6;
+                -webkit-transition: border-color 2s ease-out 0.5, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; /* Safari */
+                transition: border-color 2s ease-out 0.5. width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; /* Safari */
+            }
+            
+             input:focus
+            {
+                outline:none;
+                border-bottom: 2px solid #347AB6;
+                -webkit-transition: border-color 2s ease-out 0.5, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; /* Safari */
+                transition: border-color 2s ease-out 0.5. width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; /* Safari */
+            }
+            .form-group
+            {
+               margin-top:2%;
+            }
+            
+
+            
+             .label-su-dirty-1
+            {
+                position:absolute;
+              /*  margin-left: 29%; */
+                margin-top: 1.8%;
+                font-size:16px;
+            }
+            
+             .label-su-dirty-2
+            {
+                position:absolute;
+                margin-left: 26.5%;
+                margin-top: 1.8%;
+                font-size:16px;
+            }
+            
+             .label-su-dirty-3
+            {
+                position:absolute;
+                margin-left: 22%;
+                margin-top: 1.8%;
+                font-size:16px;
+            }
+            
+             .label-su-dirty-4
+            {
+                position:absolute;
+                margin-left: 26%;
+                margin-top: 1.8%;
+                font-size:16px;
+            }
+            
+            .label-su-warning
+            {
+                position:absolute;
+                margin-left: 17%;
+                margin-top: -2%;
+                font-size:16px;
+                color:darkgray;
+            }
+            
+          
+            
+            .sign-up-center
+            {
+                margin-top: 4%;
+            }
+            
+            
+            /*** Inline Block for general ***/
+            .inline-block
+            {
+                display: inline-block;
+            }
+            
+            .questions
+            {
+                
+                font-size:20px;ß
+                
+            }
+            
+            .ques-group
+            {
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
+            
+            
+            .ques-group-hide div, .ques-group-hide p
+            {
+                font-size:0px;
+             
+                
+                
+           
+            }
+            
+            .ques-group-hide
+            {
+                background-color: #347AB6;
+                margin: 2% auto;
+                width:10px;
+                height:10px;
+                border-radius:50%;
+                -moz-border-radius:50%;
+                -webkit-border-radius:50%;
+                
+                
+               
+            }
+            
+            .ques-group-transition
+            {
+                -webkit-transition: all .5s ease;
+                -moz-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                transition: all .5s ease;
+            }
+            
+            .todaysWorkout
+            {
+                margin:2%;
+                margin-bottom: 2%;
+           
+            }
+            
+             .everydaysWorkout
+            {
+                margin:4%;
+                margin-bottom: 2%;
+              
+            }
+            
+      /*       .todaysWorkout:hover
+            {
+                margin:4%;
+                margin-bottom: 2%;
+                border: 1px solid #347AB6;
+                background: #347AB6;
+                color:white;
+            }*/
+            
+             .todaysWorkout:hover #td-middle
+            {
+         
+             /*   border-right: 1px solid white;
+                border-left: 1px solid white;*/
+   
+            }
+            
+            .table-borderless > tbody > tr > td,
+            .table-borderless > tbody > tr > th,
+            .table-borderless > tfoot > tr > td,
+            .table-borderless > tfoot > tr > th,
+            .table-borderless > thead > tr > td,
+            .table-borderless > thead > tr > th {
+                text-align: center;
+                border: none;
+                font-size: 17px;
+            }
+            
+            /*** Font Bold **/
+            .font-bold
+            {
+                font-weight:bold;
+            }
+            
+            .lr-border
+            {
+                border-left: 1px solid #347AB6;
+                border-right:1px solid #347AB6;
+            }
+            
+            .global-color
+            {
+                color:#347AB6;
+            }
+
+            .dark-gray
+            {
+                color:darkgray;
+            }
+            
+         
+            
+            .btn-tracker-2
+            {
+                
+            }
+            
+            /*** Apple's Box Shadow to aspire flat design ***/
+            .box-shadow
+            {
+                background: white;
+                border: 1px solid;
+                border-color: #e5e5e5 #dbdbdb #d2d2d2;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+                -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+                box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+            }
+            
+            
+            
+
+            
+            
+            
+                /** Too shortern table striped. **/
+            
+                .table-striped
+                {
+                        width:80%;
+                }
+
+
+
+
+            
+            
+                /*** The circle that track repitions in tracker.html **/
+            /*     @media only screen and (min-width:1000px){
+                .tracker-circle
+                {
+                    font-size:18px;
+                    margin-top:-11%;
+                    margin-left:-15%;
+                    position:absolute;
+            
+                   top:105%; left: 50%; bottom: 0; right: 0;
+                
+                }
+                     
+                }*/
+            
+            .tracker-circle
+                {
+                    font-size:18px;
+                    margin-top:-11%;
+                    margin-left:-14.5%;
+                    position:absolute;
+            
+                   top:110%; left: 50%; bottom: 0; right: 0;
+                
+                }
+            
+            
+            .tracker-glyphicon-up
+                {
+                    font-size:18px;
+                    margin-top:-11%;
+                    margin-left:-14.5%;
+                    position:absolute;
+            
+                   top:70%; left: 50%; bottom: 0; right: 0;
+                
+                }
+            
+            .tracker-glyphicon-down
+                {
+                    font-size:18px;
+                    margin-top:-11%;
+                    margin-left:-14.5%;
+                    position:absolute;
+            
+                   top:138%; left: 50%; bottom: 0; right: 0;
+                
+                }
+            
+            
+
+            
+
+         
+        .animated1 {
+
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+         
+         @-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         .fadeIn1 {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+         }
+         
+         .fadeIn1 {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+         }
+            
+            
+        /** Float Hover By Ian Lunn (Free License - Hover Master) **/
+        .hvr-float {
+                  display: inline-block;
+                  vertical-align: middle;
+                  -webkit-transform: perspective(1px) translateZ(0);
+                  transform: perspective(1px) translateZ(0);
+                  box-shadow: 0 0 1px transparent;
+                  -webkit-transition-duration: 0.3s;
+                  transition-duration: 0.3s;
+                  -webkit-transition-property: transform;
+                  transition-property: transform;
+                  -webkit-transition-timing-function: ease-out;
+                  transition-timing-function: ease-out;
+                }
+                .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+                  -webkit-transform: translateY(-8px);
+                  transform: translateY(-8px);
+                }
+            
+            
+        /* Sink Hover By Ian Lunn (Free License - Hover Master)*/
+            .hvr-sink {
+              display: inline-block;
+              vertical-align: middle;
+              -webkit-transform: perspective(1px) translateZ(0);
+              transform: perspective(1px) translateZ(0);
+              box-shadow: 0 0 1px transparent;
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+              -webkit-transition-property: transform;
+              transition-property: transform;
+              -webkit-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+            }
+            
+            .hvr-sink:hover, .hvr-sink:focus, .hvr-sink:active {
+                  -webkit-transform: translateY(8px);
+                  transform: translateY(8px);
+                }
+
+
+            #table-planner-td
+            {
+              width:1000%;
+            }
+
+            /*** Table from planner page hover effect ***/
+            #table-planner tr:hover td, #table-planner tbody tr:hover th
+            {
+              background-color: black;
+
+                -webkit-transition: all .5s ease;
+                -moz-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                transition: all .5s ease;
+
+            }
+
+
+            /*** Code Block to fix "Unclickable Elements" Problem ***/
+            .make-clickable
+            {
+              position: :relative;
+              z-index: 1;
+            }
+
+  
+
+
+        
+        

@@ -1,0 +1,127 @@
+
+
+<nav class="navbar navbar-custom-1" data-ng-init="registerStatus = 'one'" >
+                    <div class="container-fluid white-border-bottom">
+                        <div class="brand-1 navbar-header">
+                        <a class="website-brand m-brand-signup navbar-brand  mx-auto" href="#">Workout Tracker</a>
+
+                        <button class="m-button-signup btn-custom btn btn-1 navbar-btn pull-right" type="button" data-ng-click="tologin()" style="margin-right:8%;">Log In</button>
+                            
+                        </div>
+                        <div class="button-login-1 navbar-body">
+                             <button class="d-button-signup btn-custom btn btn-1 navbar-btn pull-right" type="button" data-ng-click="tologin()">Log In</button>
+                        </div>
+                    </div>
+</nav>
+
+<div class="sign-up-center"></div>
+<div class="container-fluid">
+    
+    
+    <div class="row text-center" >
+        <div class="col-md-12">
+            
+            <div class="m-title-signup align-center sign-up">Sign Up</div>
+       
+            
+            <div class="m-circle circle-done reg-stat" style="margin:auto;">1</div>
+            <span class="glyphicon glyphicon-chevron-right " style="font-size:16px;color:darkgray"></span>
+            <span class="m-circle circle-done reg-stat" data-ng-show="registerStatus=='two' || registerStatus=='three'">2</span>
+            <span class="m-circle circle-default reg-stat" data-ng-hide="registerStatus=='two'||registerStatus=='three'">2</span>
+      <!----      <span class="glyphicon glyphicon-chevron-right " style="font-size:16px;color:darkgray"></span>
+            <span class="m-circle circle-done reg-stat" data-ng-show="registerStatus=='three' ">3</span>
+            <span class="m-circle circle-default reg-stat" data-ng-hide="registerStatus=='three'">3</span>
+            -->
+            
+             <form data-ng-init="lbool" class="m-form-register form-register" data-ng-show="registerStatus=='one'" name="form">
+                
+                
+              <div class="form-group" data-ng-init="clkTrue='f" data-ng-init="hello='1'">
+               <!--  <label for="email">Email address</label> -->
+                <div class="d-input label-su-dirty-4" data-ng-show="form.username.$dirty">Username </div>
+                <div class="d-input animate-left-3 label-su"  data-ng-hide="form.username.$dirty">Username </div>
+              
+
+                <input  style="display:none" type="text" name="fakernameremember" class="fake-autofill-fields" />
+                <div class="align-center m-input-group">
+                    <p class="m-label-username m-input dark-gray pull-left" style="display:none;margin-bottom:-2% !important; "> Username</p>
+                    <!-- Dummy DOM to reserve space -->
+                    <p class="m-input m-display dark-gray pull-left" style="visibility:hidden;margin-bottom:-2% !important" > Username</p>
+                    <input autocomplete="off" type="text" class="m-form-control-1 form-control-1" id="username" name="username" data-ng-model="username" data-ng-minlength="8" data-ng-maxlength="20" data-ng-pattern="[0-9a-zA-Z]+" required  data-ng-focus="disableUsernameWarning()" data-ng-blur="enableUsernameWarning()" data-ng-required/>
+                </div>
+                <span data-ng-show="form.username.$invalid && warningUsernameShow==true" class="label-su-warning d-view" data-ng-init="lbool[0] = form.username.$invalid && warningUsernameShow==true " >Invalid username, atleast 8 alphabets and numbers allowed</span>
+                <span data-ng-show="username=='' && warningUsernameShow==true" class="label-su-warning d-view" >A username is required</span>
+                 <span style="padding-left:.5%;" data-ng-repeat="p in posts" data-ng-if="p.user_name == username" data-ng-model="hello" class="label-su-warning d-view">Username is already taken</span>
+
+                
+              </div>
+                 
+     
+                
+              <div class="form-group" data-ng-init="boolTest=false">
+               <!--  <label for="email">Email address</label> -->
+                <div class="d-input label-su-dirty-1" data-ng-show="form.email.$dirty">Email </div>
+                <div class="d-input animate-left label-su"  data-ng-hide="form.email.$dirty">Email </div>
+                <div class="align-center m-input-group">
+                    <p style="display:none; margin-bottom:-2% !important;" class="m-label-email m-input  dark-gray pull-left" >Email</p>
+                    <!-- Dummy DOM to reserve space -->
+                    <p class="m-input m-display dark-gray pull-left" style="visibility:hidden;margin-bottom:-2% !important;"> Username</p>
+                    <input style="display:none" type="email" name="fakeusernameremembe" class="fake-autofill-fields"/>
+                    <input autocomplete="off"  type="email" class="m-form-control-1 form-control-1"  id="email" name="email" data-ng-model="name" required ng-model-options="{ updateOn: 'blur'}" data-ng-required data-ng-focus="disableEmailWarning()" data-ng-blur="enableEmailWarning()" />
+                </div>
+                <span data-ng-show="form.email.$invalid && warningEmailShow==true" class="label-su-warning d-view" >Invalid Email</span>
+                <span data-ng-show="name=='' &&  warningEmailShow==true" class="label-su-warning d-view" >A email is required</span>
+                <span data-ng-repeat="p in posts" data-ng-show="p.user_mail == name" class="label-su-warning d-view">This email is already being used</span>
+              </div>
+
+                 
+              <div class="form-group" data-ng-init="clkTrue='f">
+               <!--  <label for="email">Email address</label> -->
+                <div class="d-input label-su-dirty-2" data-ng-show="form.pass.$dirty">Password </div>
+                <div class="d-input animate-left-1 label-su"  data-ng-hide="form.pass.$dirty">Password </div>
+                 <div class="align-center m-input-group">
+                        <p style="display:none;margin-bottom:-2% !important;" class="m-label-password m-input  dark-gray pull-left">Password</p>                        
+                        <!-- Dummy DOM to reserve space -->
+                        <p class="m-input m-display dark-gray pull-left" style="visibility:hidden;margin-bottom:-2% !important;"> Username</p>
+                        <input style="display:none" type="password" name="fakeusernamerememb" class="fake-autofill-fields"/>
+
+                        <input autocomplete="off" type="password" class="m-form-control-1 form-control-1" id="pass" name="pass" data-ng-model="age" data-ng-minlength="6" required ng-model-options="{ updateOn: 'blur'}" data-ng-pattern=".*[0-9]+.*"/ data-ng-required>
+                  </div>
+                 <span data-ng-show="form.pass.$invalid" class="label-su-warning d-view" style="padding-left" >Invalid Password, atleast 6 characters with atleast one number</span>
+                <span data-ng-show="age==''" class="label-su-warning d-view" >A password is required</span>
+              </div>
+               
+                 
+            
+
+            
+              <div class="form-group">
+              <!--  <label data-ng-show="clkTrue=='t" for="pwd">Password</label> -->
+                <div class="d-input label-su-dirty-3"  data-ng-show="form.repass.$dirty"> Retype Password </div>
+                <div class="d-input animate-left-2 label-su"  data-ng-hide="form.repass.$dirty"> Retype Password </div>
+                 <div class="align-center m-input-group">
+                      <p style="display:none;margin-bottom:-2% !important;" class="m-label-repassword m-input  dark-gray pull-left">Retype Password</p>
+                    <!-- Dummy DOM to reserve space -->
+                    <p class="m-input m-display dark-gray pull-left" style="visibility:hidden;margin-bottom:-2% !important;"> Username</p>
+                    <input type="password" class="m-form-control-1 form-control-1" id="repass" name="repass" data-ng-required data-ng-model="strRePass" required  />
+                  </div>
+                <span data-ng-show=" age!= strRePass" class="label-su-warning d-view"  >The passwords are not the same</span>
+                <span data-ng-show="strRePass==''" class="label-su-warning d-view" >Retyping password is required</span>
+              </div>
+            
+                <div  id="btn-next" data-ng-init="bool=form.$invalid || age!= strRePass"><button data-ng-disabled="form.$invalid || age!= strRePass || form.username.$pristine || form.email.$pristine || form.age.$pristine || form.repass.$pristine || boolUsernameTemp !=0 || boolEmailTemp !=0  " class="btn-2 m-btn-next" type="button" data-ng-click="postData(username,name,age); toregister2(); passover()" type="submit"  >next</button></div> 
+                
+                
+                 
+             
+                 
+         
+            </form>
+            
+            
+
+          <script src="register.js"></script>
+          <script src="frameworks/js/jquery.js"></script>
+
+
+

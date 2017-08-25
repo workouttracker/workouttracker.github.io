@@ -1,0 +1,87 @@
+
+
+<nav class="navbar navbar-custom-1" data-ng-init="registerStatus = 'one'" >
+                    <div class="container-fluid white-border-bottom">
+                        <div class="brand-1 navbar-header">
+                        <a class="m-navbar-login website-brand navbar-brand  mx-auto" href="#" style="margin-bottom:10%;">Workout Tracker</a>
+                            
+                        </div>
+
+                    </div>
+</nav>
+
+<div class="sign-up-center"></div>
+<div class="container-fluid">
+    
+    
+    <div class="row text-center" style="padding-top:5%;"  >
+        <div class="col-md-12">
+            
+            <div class="align-center m-title-login sign-up">Log In</div>
+            
+
+
+            
+
+             <form class="form-register " name="form">
+                
+               
+                 
+                  <div class="form-group m-form-group" data-ng-init="clkTrue='f">
+               <!--  <label for="email">Email address</label> -->
+                <div class="d-display label-su-dirty-4" data-ng-show="form.lgusername.$dirty">Username </div>
+                <div class="d-display animate-left-3 m-label-su label-su"  data-ng-hide="form.lgusername.$dirty">Username </div>
+                <div class="align-center m-input-group">
+                    <p class="m-label-username m-display dark-gray pull-left" style="display:none;margin-bottom:-2% !important; "> Username</p>
+                    <!-- Dummy DOM to reserve space -->
+                    <p class="m-display m-display dark-gray pull-left" style="visibility:hidden;margin-bottom:-2% !important" > Username</p>
+                    <input type="text" class="m-form-control-1 form-control-1 m-lgusername" id="lgusername" name="lgusername" data-ng-model="lgusername" required ng-model-options="{ updateOn: 'blur'}" data-ng-required/>
+                </div>   
+                <span data-ng-show="lgusername==''" class="d-display label-su-warning" >A username is required</span>
+            
+                
+              </div>
+    <!--Test             lTemp: {{lTemp}}
+                 loginUsernameTemp: {{loginUsernameTemp}}
+                 password? : {{posts[0].password}}
+                 user:{{lgusername}} -->
+       
+            
+                 
+                 
+                 
+              <div class="form-group m-form-group" data-ng-init="clkTrue='f">
+               <!--  <label for="email">Email address</label> -->
+                <div class="d-input label-su-dirty-2" data-ng-show="form.lgpass.$dirty">Password </div>
+                <div class="d-input animate-left-1 m-label-su label-su"  data-ng-hide="form.lgpass.$dirty">Password </div>
+                <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+                <input style="display:none" type="password" name="fakeusernameremembere" class="fake-autofill-fields"/>
+                <div class="align-center m-input-group">
+                    <p class="m-label-password m-input dark-gray pull-left" style="display:none;margin-bottom:-2% !important; ">Password</p>
+                    <!-- Dummy DOM to reserve space -->
+                    <p class="m-input m-display dark-gray pull-left" style="visibility:hidden;margin-bottom:-2% !important" > Username</p>
+                    <input type="password" class="m-form-control-1 form-control-1" id="lgpass" name="lgpass" data-ng-model="lgpass" data-ng-minlength="6" required ng-model-options="{ updateOn: 'blur'}" data-ng-pattern=".*[0-9]+.*"/ data-ng-required>
+                </div>
+                
+                 <span data-ng-show="lgpass==''" class="label-su-warning d-display" >A password is required</span>
+          
+              </div>
+         
+                 
+            
+            
+                <div id="btn-next" data-ng-init="bool=form.$invalid || age!= strRePass"><button data-ng-disabled="form.$invalid || form.lgusername.$pristine || form.lgpass.$pristine  " class="btn-2 m-btn-login" type="button" data-ng-click="checkLogin()" type="submit"  >Log In</button></div> 
+   
+            </form>
+            
+
+
+
+</div>
+
+
+
+
+
+<script src="frameworks/js/jquery.js"></script>
+

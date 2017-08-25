@@ -1,0 +1,164 @@
+
+<div style="background:#FAFAFA" class="animated fadeIn">
+<nav class="navbar navbar-custom-1" data-ng-init="registerStatus = 'one'" >
+                    <div class="container-fluid white-border-bottom">
+                        <div class="brand-1 navbar-header">
+                        <a class="brand-font navbar-brand  mx-auto" data-ng-click="tohomefromtracker()">Workout Tracker</a>
+                            
+                        </div>
+                        <div class="button-login-1 navbar-body">
+                             <span class='navbar-text pull-right' style="font-size:16px;padding-bottom:2%;">Welcome,{{id[0].user_name}}!</span>
+                        </div>
+                    </div>
+</nav>
+
+ <!--   {{usertrackerplan[0].frequency}}
+    {{bool2}}-->
+    <div class="row align-center text-center" style="width:90%;border-bottom: 1px solid lightgrey; padding-bottom:3%;padding-top: 2%; margin-bottom:2%;">
+          <div class="col-xs-3" style="color:gray" data-ng-click="tohomefromtracker()"> <span class="m-glyph-return-tracker fa fa-arrow-circle-o-left" style="font-size:24px;margin-left:-45%;margin-top:9%;"></span><span style="margin-left:-5%;font-size:20px"> Return</span> </div>
+        <div class="col-xs-6">
+        
+                <p class="h1">Tracker</p>
+        
+        </div>
+        <div class="col-xs-3"></div>
+    
+    
+    </div>
+
+      <div class="row align-center text-center" style="width:90%;border-bottom: 1px solid lightgrey; padding-bottom:3%;padding-top: 0%; margin-bottom:2%;" >
+
+        <div class="col-md-4 col-xs-1">
+        </div>
+        <div class="col-xs-2 ">
+           
+                <div data-ng-click="postworkout();tohome()"  ><button  class="btn-2 m-btn-tracker" type="button" style="padding:8%;background:#FAFAFA"   >Save Workout</button></div> 
+
+        
+        </div>
+          <div class="m-display col-xs-4 col-md-0"></div>
+          <div class="col-xs-2 ">
+           
+
+                <div   ><button data-ng-click="totracker()" class="btn-2 m-btn-tracker " style="padding:8%;background:#FAFAFA"  type="button"  >Restart</button></div> 
+        
+        </div>
+
+         <div class="col-md-2 col-xs-3">
+        </div>
+    
+    
+    </div>
+
+<div class="container-fluid" id="Append-Container" style="background:#FAFAFA" >
+
+    
+    
+    <div class="row box-shadow"  style="margin:2% 2%;"> 
+        <div class="col-md-12" >
+
+                <div class="row top-border-hover tracker-hover"style="margin:0% 2%;margin-top:4%;margin-bottom:2%;" data-ng-init="showinput1=[0,0]"  > 
+                    <div class="col-xs-7 inline-block col-md-4 m-tracker-right-border " style="border-right: 1px solid lightgrey;" > 
+            
+                      <p class='m-tracker-exercise tracker-weights' style="padding-top:0%;padding-bottom: 0;padding-left:5%;font-size:24px">{{usertrackerplan[0].exercise}}</p> 
+                        
+                    
+                
+                    <p data-ng-click="showinput1[0]=1" class=' weights m-tracker-details' data-ng-show="showinput1[0]==0" style="display:inline-block;margin-top:-7%;margin-bottom:5%;margin-left:5%;color: #347AB6;border-bottom:1px solid; border-width:0px;position: relative;font-size:18px;
+z-index: 1;">{{usertrackerplan[0].weights}}kg</p> <input type="text" class="from-control-1" data-ng-blur="showinput1[0]=0" data-ng-show= "showinput1[0]==1" > 
+                   
+                    
+                      <p class=' setreps m-tracker-details' style="display:inline-block;margin-top:-7%;padding-left:20%;color: #347AB6;position: relative;font-size:18px;
+z-index: 1;">{{usertrackerplan[0].set}} x {{usertrackerplan[0].rep}}</p> 
+                        
+       
+                        <div style="margin-top:-2%;"> 
+                         <p class=' underline-1' style="display:inline-block;margin-top:-4%;margin-bottom:6%;margin-left:5%;border-top:2px solid #347AB6;width:0%;font-size:12px"></p> 
+                        
+                         <p class=' underline1-1' style="display:inline-block;margin-left:19%;display:inline-block;margin-top:-4%;margin-bottom:6%;border-top:2px solid #347AB6;width:0%;font-size:12px">
+                        </div>
+                        
+                        
+                    </div>
+                    
+            
+                    
+                    <div class="m-display col-xs-5 col-md-0" >
+                        <div  style=" margin-left:0%;margin-top:0%; " data-ng-show="bool<usertrackerplan[0].set-1"><button class="btn-next-set-1 btn-2"  data-ng-click="bool=bool+1"  type="button" style="padding-left:2%;padding-right:2%;font-size:12px; padding:4% "  >Next Set</button></div> 
+                        
+                         <div data-ng-show="bool<usertrackerplan[0].set && bool >usertrackerplan[0].set-2" style="margin-left:0%;margin-top:0%;padding-left:2%;padding-right:2%; " ><button   data-ng-click="bool=bool+1" class=" btn-next-set-1 btn-2" type="button" style="font-size:12px; padding:4%"   >Finish</button></div> 
+                        
+                        <div style="margin-top:-8%">
+                            <div style="font-size:30px; "  class="inline-block  circle-button "><p style="margin-top:-53%;margin-left:10%" data-ng-click="repcount[bool]=repcount[bool]--1;" >+</p></div> 
+                            <div style="font-size:30px;margin-left:14%; "  class="inline-block  circle-button "><p style="margin-top:-53%;margin-left:28%" data-ng-click="repcount[bool]=repcount[bool]-1;">-</p></div> 
+                        </div>
+                    
+                
+                    
+                    </div>
+                    
+             
+                    
+                    <div class="col-xs-12 col-md-8  text-center" data-ng-init="showinput=[0,0,0,0,0];clickenable=[false,false,false,false,false];boolTrue=true;" id="tracker-content" style="margin-top:-1%">  
+                        
+                        <hr class="m-display" style="margin-top:-5%">
+                        <div  style="margin-left:-70%;margin-top:0%; " data-ng-show="bool<usertrackerplan[0].set-1"><button class="d-view btn-next-set-1 btn-2"  data-ng-click="bool=bool+1"  type="button" style="padding-left:2%;padding-right:2%; "  >Next Set</button></div> 
+                        
+                         <div data-ng-show="bool<usertrackerplan[0].set && bool >usertrackerplan[0].set-2" style="margin-left:-70%;margin-top:0%;padding-left:2%;padding-right:2%; " ><button   data-ng-click="bool=bool+1" class="d-view btn-next-set-1 btn-2" type="button"   >Finish</button></div> 
+                        
+                        <!-- Text to be displayed after exercise is complete. -->
+                        <div class="d-display animated1 fadeIn" data-ng-show="bool>usertrackerplan[0].set-1 " style="left:3%;top:45%;position:absolute;padding-left:0%;padding-right:2%;width:40% " >Congrats on finishing the set. Lift Heavier next time.</div> 
+                        
+                        <!-- Dummy Block of code to keep next() absolute elements in place. -->
+                        <div data-ng-show="bool>usertrackerplan[0].set-1 "  style="margin-left:-70%;margin-top:0%;padding-left:2%;padding-right:2%;visibility:hidden " ><button   data-ng-click="bool=bool+1;clickenable[0] = true" class="btn-next-set-1 btn-2" type="button"   >Finish</button></div> 
+                        <span data-ng-show="bool<usertrackerplan[0].set" data-ng-click="repcount[bool]=repcount[bool]--1;" class="d-view hvr-float fa fa-angle-up glyphicon-absolute tracker-glyphicon-up m-tracker-glyphicon-up global-color" style="font-size:30px"></span>
+                        
+                        <span data-ng-show="bool<usertrackerplan[0].set" data-ng-click="repcount[bool]=repcount[bool]-1;" class="d-view hvr-sink fa fa-angle-down glyphicon-absolute tracker-glyphicon-down m-tracker-glyphicon-down global-color" style="font-size:30px"></span>
+                        
+                        <div  data-ng-hide="showinput[0]==1"class="circle-empty tracker-circle m-tracker-circle " id="1-set-tracker-1" data-ng-click="check(bool,0,1)" style="font-size:18px;margin-top:-11%;margin-left:-14.5%;position:absolute"  >{{repcount[0]}}</div>
+                        
+                        <input data-ng-blur="showinput[0] =0 " data-ng-show="showinput[0]==1" data-ng-model="repcount[0]"  class="circle-default tracker-circle m-tracker-circle m-tracker-input-1" id="1-set-tracker-1" style="text-align:center;" >
+
+                        <div class="circle-empty tracker-circle m-tracker-circle" data-ng-show="bool>0 && showinput[1]==0" id="1-set-tracker-2" data-ng-click="check(bool,1,2)">
+                            {{repcount[1]}}
+                        </div>
+                        
+                        <input data-ng-blur="showinput[1] =0" data-ng-show="showinput[1]==1" data-ng-model="repcount[1]"  class="circle-default m-tracker-input-2 tracker-circle m-tracker-circle" id="1-set-tracker-2" style="text-align:center;" >
+                        
+                        <div class="circle-empty tracker-circle m-tracker-circle" data-ng-show="bool>1 && showinput[2]==0" data-ng-click="check(bool,2,3)" id="1-set-tracker-3" >{{repcount[2]}}</div>
+                        
+                         <input data-ng-blur="showinput[2] =0" data-ng-show="showinput[2]==1" data-ng-model="repcount[2]"  class="circle-default m-tracker-input-3 tracker-circle m-tracker-circle" id="1-set-tracker-2" style="text-align:center;" >
+                        
+                        <div class="circle-empty tracker-circle m-tracker-circle" data-ng-show="bool>2 && showinput[3] ==0 &&usertrackerplan[0].set>3" id="1-set-tracker-4" data-ng-click="check(bool,3,4)">{{repcount[3]}}</div>
+                        
+                        <input data-ng-blur="showinput[3]=0" data-ng-show="showinput[3]==1 &&usertrackerplan[0].set>4" data-ng-model="repcount[3]"  class="circle-default tracker-circle m-tracker-input-4 m-tracker-circle" id="1-set-tracker-2" style="text-align:center;" >
+                        
+                        
+                        <div class="circle-empty tracker-circle m-tracker-circle" data-ng-show="bool>3 && showinput[4] ==0 &&usertrackerplan[0].set>4" id="1-set-tracker-5" data-ng-click="check(bool,4,5)">{{repcount[4]}}</div>
+                        
+                         <input data-ng-blur="showinput[4]=0" data-ng-show="showinput[4]==1 &&usertrackerplan[0].set>4" data-ng-model="repcount[4]"  class="circle-default tracker-circle m-tracker-input-5 m-tracker-circle" id="1-set-tracker-2" style="text-align:center;" >
+
+                    </div>
+                </div>
+            
+   
+        </div>
+    </div>
+    
+    
+
+    
+</div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="frameworks/js/jquery.js"></script>

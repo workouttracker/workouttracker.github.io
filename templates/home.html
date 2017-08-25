@@ -1,0 +1,261 @@
+
+
+
+<!--{{calenderevents}}-->
+<div data-ng-controller="myCtrl">
+<nav class="navbar navbar-custom-1" data-ng-init="registerStatus = 'one'" >
+                    <div class="container-fluid white-border-bottom">
+                        <div class="brand-1 navbar-header">
+                        <a class="brand-font navbar-brand  mx-auto" data-ng-click="tohome()">Workout Tracker</a>
+                            
+                        </div>
+                        <div class="button-login-1 navbar-body">
+                           <button class="btn btn-custom btn-1 navbar-btn pull-right" type="button" data-ng-click="towelcome()" style="padding:.7%;">Log Out</button>
+                             <span style="margin-right:4%;" class='navbar-text pull-right' style="font-size:16px;padding-bottom:2%;">Welcome,{{id[0].user_name}}!</span>
+                            
+                        </div>
+                    </div>
+ 
+</nav>
+<!---asdasd:{{pastworkouts}}{{userid}}      --->
+
+     <script>
+         //var daySelected = 2;
+       
+     setTimeout( function () {
+ 
+             window.daySelected = window.currentdate;
+             window.monthSelected = window.currentmonth;
+             window.yearSelected = window.currentyear;
+       }, 100);
+         
+         function loadDates(){
+        
+    setTimeout( function () {
+        $(document).ready(function () {
+          
+      function addLeadingZero(num) {
+    if (num < 10) {
+      return "0" + num;
+    } else {
+      return "" + num;
+    }
+  }; 
+         
+             
+             
+             
+       $(".responsive-calendar").responsiveCalendar({
+          time: window.time.toString(),
+          events: JSON.parse(window.events),
+          onActiveDayClick: function(events) { 
+              var thisDayEvent, key;
+              key = $(this).data('year')+'-'+addLeadingZero( $(this).data('month') )+'-'+addLeadingZero( $(this).data('day') );
+              thisDayEvent = events[key];window.daySelected = parseFloat($(this).data('day')); window.monthSelected = parseFloat($(this).data('month')); window.yearSelected = parseFloat($(this).data('year'));
+              $( ".switch-workout" ).trigger( "click" );
+              angular.element(".switch-workout").triggerHandler('click');
+              window.sethomestatus = 'wo';
+           
+          }
+  }
+        ); console.dir(window.events);});
+    
+    }, 0);
+        
+         }
+  
+    </script>
+
+<div class="container-fluid" style="background:#DCDCDC;">
+    
+    
+    <div class="row todaysWorkout box-shadow "   >
+        <div class="row-xs-12  ">
+            
+
+        <!--    <p class="text-center h4 color-white" >Track Now!</p> -->
+            
+            <div class="row"  style="position:relative;z-index:1;">
+                <div class="col-xs-12" id="switch-container">
+                
+              
+                <div style="position:relative;display:table; margin-top:2%;" class="align-center m-home-nav">
+                    <div class="align-center" style="margin-top:2%;"><a style="font-size: 20px;color:darkgray;padding-right:33px;cursor:pointer" class="text-decoration-none inline-block switch-workout" data-ng-click="homeStatus='wo'">Workout</a><a style="color:darkgray; font-size: 20px;cursor:pointer"class="inline-block text-decoration-none" id="switch-calender" data-ng-click="homeStatus='cal'" onclick="loadDates()">Calender</a></div>
+
+                    <a id="switch-border" style="margin-top:-2%;font-size: 20px;color:white;border-top:2px solid darkgrey" class="inline-block text-decoration-none" >Workout</a>
+                    </div>
+              
+                </div>
+    
+             <!--   asd:{{daySelected}}{{monthSelected}}{{yearSelected}}{{dateSelectedConcat}}-->
+              
+            </div>
+
+            <md-calendar ng-model="birthday"></md-calendar>
+            
+            
+            <div class='row' data-ng-show="homeStatus=='cal'" data-ng-hide="homeStatus=='wo'" >
+                <div class="col-xs-1 col-md-2"></div>
+                <div class="col-xs-10 col-md-8">
+                    <!-- Responsive calendar - START -->
+        <!-- Responsive calendar - START -->
+    	<div class="responsive-calendar">
+        <div class="controls">
+            <a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+            <h4><span data-head-year></span> <span data-head-month></span></h4>
+            <a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+        </div><hr/>
+        <div class="day-headers">
+          <div class="day header">Mon</div>
+          <div class="day header">Tue</div>
+          <div class="day header">Wed</div>
+          <div class="day header">Thu</div>
+          <div class="day header">Fri</div>
+          <div class="day header">Sat</div>
+          <div class="day header">Sun</div>
+        </div>
+        <div class="days" data-group="days">
+          
+        </div>
+      </div>
+      <!-- Responsive calendar - END -->
+                
+                
+                </div>
+            
+                <div class="col-xs-1 col-md-2"></div>
+            
+             
+            
+
+            </div>
+            
+            <div class="row homeappend " data-ng-click="totracker();" >
+                <div class="row-md-12  " id="appendhome">
+                
+            <p data-ng-repeat="n in num" class="h1 text-center m-title-today" style="color:black" id="todaysWorkoutLabel" data-ng-show="fullweek[n] == currentday && usertrainingdaysplan[n] == true && homeStatus != 'cal'  " data-ng-if="daySelected == currentdate && monthSelected == currentmonth && yearSelected == currentyear"> Today's Workout</p>
+            <div class="tabletoday">
+            <table data-ng-if="daySelected == currentdate && monthSelected == currentmonth && yearSelected == currentyear" data-ng-repeat="n in num" class="m-table table table-striped text-center table-borderless" style="margin-left:10%;margin-top:0%;margin-bottom:3%;" data-ng-show="fullweek[n] == currentday && usertrainingdaysplan[n] == true && homeStatus != 'cal' "> 
+                <thead>
+                
+                  <tr class="text-center">
+                    <th class=" global-color" style="font-size:23px;">Exercise</th>
+                    <th class=" global-color" style="font-size:23px;">Set and Reps</th>
+                    <th class=" global-color" style="font-size:23px;">Weights</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                    
+
+               
+                    
+                        <tr  data-ng-repeat="p in posts  |  filter:{ day: currentday}" data-ng-show="p.user_id == userid" >
+                            <td>{{p.exercise}}</td>
+                            <td class="td-middle" style="border-left: 3px solid white; border-right:3px solid white;">{{p.set}} x {{p.rep}}</td>
+                            <td>{{p.weights}}kg</td>
+                            
+                           
+                        </tr>
+
+                        <div style="margin-top:10%;margin-bottom:10%"class="text-center h1" data-ng-repeat="n in num" data-ng-show="fullweek[n] == currentday && usertrainingdaysplan[n] == false ">
+
+                          There is no training today.
+
+                        </div>                  
+                    
+                 
+                        
+              </table>
+                    </div>
+                  
+                       
+            <table  data-ng-hide="homeStatus=='cal' || daySelected == currentdate && monthSelected == currentmonth && yearSelected == currentyear" class="table table-striped text-center table-borderless" style="margin-left:10%;margin-top:0%;margin-bottom:3%;"> 
+                <thead>
+                
+                  <tr class="text-center">
+                    <th class=" global-color" style="font-size:23px;">Exercise</th>
+                    <th class=" global-color" style="font-size:23px;">Set and Reps</th>
+                    <th class=" global-color" style="font-size:23px;">Volume</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                    
+
+               
+                    
+                        <tr  data-ng-repeat="p in pastworkouts" data-ng-show="p.user_id == userid && p.day == daySelected && p.month == monthSelected && p.year == yearSelected" >
+                            <td>{{p.exercise}}</td>
+                            <td class="td-middle" style="border-left: 3px solid white; border-right:3px solid white;">{{p.set}}</td>
+                            <td>{{p.volume}}</td>
+                            
+                           
+                        </tr>
+
+                                    
+                    
+                 
+                        
+              </table>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="row home-features"  >
+             <div data-ng-click="toplanfromhome();" class="col-xs-12  col-md-4   text-center box-shadow home-features-each m-home-features-each" id="home-features-1" >
+                 <span class="glyphicon glyphicon-calendar global-color"></span>
+                <p class="h4">Workout Plan</p>
+                 <p class="color-white m-home-desc" >View or edit your full workout plan.</p>
+            </div>
+           <div data-ng-click="tocustomfromhome();" class="col-xs-12 col-md-4  box-shadow text-center home-features-each m-home-features-each home-lr-margin" id="home-features-2">
+                <span class="glyphicon glyphicon-check global-color"></span>
+                <p class="h4">Custom Builder</p>
+                <p class="color-white m-home-desc">Customize every aspect of your workout plan.</p>
+                
+            </div>
+           
+            <div data-ng-click="tograph()" class=" col-xs-12 col-md-4   box-shadow text-center home-features-each m-home-features-each "  id="home-features-3">
+                 <span class="glyphicon glyphicon-stats global-color"></span>
+                <p class="h4">Progress Graph</p>
+                <p class="color-white m-home-desc">Visualize your progress through graphs.</p>
+                
+            </div>
+    </div>
+  
+      
+        <div class=" row">
+            <div class="col-md-12 intro-footer text-center ">
+            <button class="btn btn-custom intro-btn center-block" type="button">Important Disclaimer</button>
+               <p class="color-white align-center" style="width:80%;">WorkoutTracker.com is singe page application that builds a workout program based on your needs and specification. Corporate sites differ from electronic commerce, portal, or sites in that they provide information to the public about the company rather than transacting business or providing other services.</p>
+               <div >
+                  <a href="#" class="fa fa-facebook color-white footer-icon"></a>
+                  <a href="#" class="fa fa-instagram color-white footer-icon"></a>
+                  <a href="#" class="fa fa-twitter color-white footer-icon"></a>
+                
+                </div>
+            
+            </div>
+            
+        </div>
+    
+      
+            
+        
+      <div class="row align-center" id="append-home-button" style=" display:none "><div style="" class="col-xs-12 align-center "><div class="align-center" style="margin:0 auto;"><button style="margin:0 auto;display:table; padding:1%; margin-bottom:2%" class=" m-home-today-btn btn-2 align-center"   data-ng-click="totracker();"  type="button" >Track Today's Workout</button></div></div></div>
+     
+    
+    
+            
+            
+</div>
+        
+   
+
+</div>
+
+
+

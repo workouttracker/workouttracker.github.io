@@ -1,0 +1,239 @@
+
+
+<nav class="navbar navbar-custom-1" data-ng-init="registerStatus = 'one'" >
+                    <div class="container-fluid white-border-bottom">
+                        <div class="brand-1 navbar-header">
+                        <a class="brand-font navbar-brand  mx-auto" data-ng-click="tohomefromtracker()">Workout Tracker</a>
+                            
+                        </div>
+                        <div class="button-login-1 navbar-body">
+                             <span class='navbar-text pull-right' style="font-size:16px;padding-bottom:2%;">Welcome,{{id[0].user_name}}!</span>
+                        </div>
+                    </div>
+</nav>
+
+<!--{{weekfrequencycount}}
+{{customworkout}}-->
+
+<div class="container-fluid" data-ng-init="dayweek= ['mon','tue','wed','thu','fri','sat','sun'];" style="background:#FAFAFA">
+    <div class="row align-center text-center" style="width:90%;border-bottom: 1px solid lightgrey; padding-bottom:3%;padding-top: 2%; margin-bottom:2%;">
+        <div class="col-xs-12">
+        
+                <div class="col-xs-3" style="color:gray" data-ng-click="tohomefromtracker()"> <span class="fa fa-arrow-circle-o-left m-glyph-return-custom" style="font-size:24px;margin-left:-45%;margin-top:10%;"></span><span style="margin-left:-5%;font-size:20px"> Return</span> </div>
+        <div class="col-xs-6">
+        
+                <p class="h1 m-title-custom">Custom Builder</p>
+        
+        </div>
+        <div class="col-xs-3"></div>
+    
+        
+        </div>
+    
+    
+    </div>
+    
+    <div class="row align-center" >
+    
+        <div class="col-xs-4 col-md-2 m-drop-tracker">
+            
+            <h5 class="m-display text-center">Exercise:</h5>
+            <h3 class="d-display">Exercise</h3>
+                <p class="d-display">Pick exercises from our database that you like:</p>
+              <div  class="global-color" class="dropdown" data-ng-init="exercisepicked='Exercise'">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{exercisepicked}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">Chest</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[0].exercise" data-ng-click="saveexercise(i.name)"><a>{{i.name}}</a></li>
+                
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Back</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[1].exercise" data-ng-click="saveexercise(i.name)"><a>{{i.name}}</a></li>
+                
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Bicep</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[2].exercise" data-ng-click="saveexercise(i.name)"><a>{{i.name}}</a></li>
+                
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Tricep</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[3].exercise" data-ng-click="saveexercise(i.name)"><a>{{i.name}}</a></li>
+
+                </ul>
+              </div>
+        </div>     
+
+        <div class="col-xs-4 col-md-2 m-drop-tracker">
+            
+            <h5 class="m-display text-center">Weight:</h5>
+             <h3 class="d-display m-drop-tracker">Weight</h3>
+              <p class="d-display">Pick a weight that is suitable for you:</p>
+              <div class="dropdown" data-ng-init="weightpicked='Weights'">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{weightpicked}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">Dropdown header 1</li>
+                  <li data-ng-repeat="i in weightlist"  data-ng-click="saveweight(i)"><a>{{i}}kg</a></li>
+        
+  
+                </ul>
+              </div>
+        
+        </div>
+            
+        <div class="col-xs-4 col-md-2 m-drop-tracker" >
+            <h5 class="m-display text-center" style="margin-left:-35%">Set:</h5>
+             <h3 class="d-display">Set</h3>
+              <p class="d-display"> Pick a set that suits the level of intensity that you want:</p>
+              <div class="dropdown" data-ng-init="setpicked='Sets'">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{setpicked}}
+                <span class="caret"></span></button>
+                 <ul class="dropdown-menu">
+                  <li data-ng-repeat="i in [3,4,5]"  data-ng-click="saveset(i)"><a>{{i}}</a></li>
+                </ul>
+              </div>
+        
+        </div>
+        
+        <div class="col-xs-3 m-display"></div>
+     
+        <div class="col-xs-3 col-md-2 m-drop-tracker" data-ng-init="reppicked='Rep'">
+            <h5 class="m-display text-center">Rep:</h5>
+            <h3 class="d-display">Rep</h3>
+              <p class="d-display">Pick different rep ranges that is suitable for you needs:</p>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{reppicked}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+             
+                  <li data-ng-repeat="i in [5,8,10,12,15,18,20]" data-ng-click="saverep(i)"><a>{{i}}</a></li>
+      
+               
+                </ul>
+              </div>
+        
+        </div>
+           
+        
+        
+        <div class="col-xs-3 col-md-2 m-drop-tracker">
+            <h5 class="m-display text-center">Day:</h5>
+            <h3 class="d-display">Day</h3>
+              <p class="d-display">Pick a day that you want to add this exercise to:</p>
+              <div class="dropdown" data-ng-init="daypicked='Day'">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{daypicked}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header" data-ng-repeat="i in fullweek" data-ng-click="saveday(i)"><a>{{i}}</a></li>
+                </ul>
+              </div>
+        
+        </div>
+        
+         <div class="col-xs-3 m-display"></div>
+        
+         <div class="col-xs-12 col-md-2" data-ng-init="custommsg=''">
+             
+               <div data-ng-click=""><button class="btn button-custom-builder navbar-btn " style="margin-top:30%;width:100%;background:transparent;border: 1px solid #347AB6;color:#347AB6;" type="button" data-ng-click="checkcustom();addcustomexercise()" data-ng-disabled="customkey">Add exercise</button></div>  
+               <button class="btn button-custom-builder navbar-btn " style="width:100%;background:transparent;border: 1px solid #347AB6;color:#347AB6;" type="button" data-ng-click="tohome();delData();addcustomworkout();">Finalize Workout</button>
+               <p class="text-center">{{custommsg}}</p>
+        
+        </div>
+    </div>
+    
+     
+
+
+    <div data-ng-repeat="n in num" class="row box-shadow animated1 fadeIn everydaysWorkout" data-ng-show="usertrainingdays[n] == true">
+        
+        <div class="row-md-12" >
+            
+
+            <p class="h1 text-center" style="color:black;">{{fullweek[n]}}</p>
+            
+            <div class="row "  >
+                <div class="row-md-12">
+                    
+            <table class="m-table table text-center table-striped table-borderless" style="margin-left:5%;margin-top:2%;margin-bottom:4%;width:90%">
+                <thead>
+                
+                  <tr class="text-center ">
+                    <th  class=" global-color" style="font-size:23px;">Exercise</th>
+                    <th  class=" global-color" style="font-size:23px;">Set and Reps</th>
+                    <th  class=" global-color" style="font-size:23px;">Weights</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                    
+            
+             
+                      
+                        <tr  data-ng-repeat="i in onetohundred" data-ng-if="customworkout[i] != null && customworkout[i].day == fullweek[n]" >
+                            <td>{{customworkout[i].exercise}}</td>
+                            <td style="border-left: 4px solid white; border-right:4px solid white;">{{customworkout[i].set}} x {{customworkout[i].rep}}</td>
+                            <td>{{customworkout[i].weights}}kg<span class="pull-right"><button class="btn-2" data-ng-click="customworkout[i]=null" onmouseout="this.style.background ='none'" onmouseover="this.style.background ='#347AB6'; " style="visibility:hidden">del</button></span></td>
+                            
+                           
+                        </tr>
+                        
+                 
+                    
+                    
+                 
+                        
+              </table>
+                    
+              
+                </div>
+            </div>
+            
+        </div>
+    </div>
+ 
+   
+    
+   
+    
+      
+        <div class=" row" style="padding-top:15%;">
+            <div class="col-md-12 intro-footer text-center ">
+            <button class="btn btn-custom intro-btn center-block" type="button">Important Disclaimer</button>
+               <p class="color-white align-center" style="width:80%;">WorkoutTracker.com is singe page application that builds a workout program based on your needs and specification. Corporate sites differ from electronic commerce, portal, or sites in that they provide information to the public about the company rather than transacting business or providing other services.</p>
+               <div >
+                  <a href="#" class="fa fa-facebook color-white footer-icon"></a>
+                  <a href="#" class="fa fa-instagram color-white footer-icon"></a>
+                  <a href="#" class="fa fa-twitter color-white footer-icon"></a>
+                
+                </div>
+            
+            </div>
+            
+        </div>
+    
+ 
+            
+        
+    
+     
+    
+    
+            
+            
+          
+</div>
+        
+        
+   
+
+
+    
+
+
+
+
+
+
+
+
+

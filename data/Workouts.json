@@ -1,0 +1,169 @@
+{
+    "body": [
+        {"part": "chest","exercise":
+
+            [{"name":"Bench Press","type":"com"},
+
+            {"name":"Dumbell Press","type":"iso"},
+
+            {"name":"Chest Flyes","type":"iso"},
+             
+            {"name":"Push up","type":"iso"},
+
+            {"name":"Decline Press","type":"iso"},
+
+            {"name":"Incline Press","type":"iso"},
+
+            {"name":"Machine Flyes","type":"iso"},
+             
+            {"name":"Machine Press","type":"iso"},
+
+            {"name":"Inline Flyes","type":"iso"},
+
+            {"name":"Decline Flyes","type":"iso"}]
+        
+    },
+    {"part": "back","exercise":
+
+            [{"name":"Deadlift","type":"com"},
+
+            {"name":"Barbell Row","type":"com"},
+
+            {"name":"Pull Up","type":"iso"},
+            
+            {"name":"T-Bar Rows","type":"com"},
+
+            {"name":"Seated Row","type":"iso"},
+
+            {"name":"Lat Pulldown","type":"iso"},
+
+            {"name":"One Arm Row","type":"iso"},
+            
+            {"name":"Dumbbell Row","type":"com"},
+
+            {"name":"Good Mornings","type":"com"},
+
+            {"name":"Back Extensions","type":"iso"}]
+        
+    },
+    {"part": "bicep","exercise":
+
+            [{"name":"Barbell Curl","type":"com"},
+
+            {"name":"Dumbell Curl","type":"iso"},
+
+            {"name":"Preacher Curl","type":"iso"},
+             
+            {"name":"Cable Curl","type":"iso"},
+
+            {"name":"Reverse Curl","type":"iso"},
+
+            {"name":"Concentration Curl","type":"iso"},
+
+            {"name":"Lying Cable Curl","type":"iso"},
+             
+            {"name":"Supinated Curl","type":"iso"},
+
+            {"name":"Incline Curl","type":"iso"},
+
+            {"name":"Alternating Curl","type":"iso"}]
+        
+    },
+    {"part": "tricep","exercise":
+
+            [{"name":"Dips","type":"com"},
+
+            {"name":"Tricep Pushdown","type":"iso"},
+
+            {"name":"Dumbell Kickback","type":"iso"},
+             
+            {"name":"Tricep Pulldown","type":"iso"},
+
+            {"name":"Bench Dips","type":"iso"},
+
+            {"name":"Skullcrushers","type":"iso"},
+
+            {"name":"Dumbell Kickback","type":"iso"},
+             
+            {"name":"Tricep Pulldown","type":"iso"},
+
+            {"name":"Bench Dips","type":"iso"},
+
+            {"name":"Skullcrushers","type":"iso"}
+            
+            ]
+        
+    },
+    {"part": "shoulder","exercise":
+
+            [{"name":"Overhead Press","type":"com"},
+
+            {"name":"Arnold Press","type":"iso"},
+
+            {"name":"Lateral Raise","type":"iso"},
+             
+            {"name":"Dumbbell Shrug","type":"iso"},
+
+            {"name":"Barbell Shrug","type":"iso"},
+
+            {"name":"Front Raises","type":"iso"},
+
+            {"name":"Shoulder Press","type":"com"},
+             
+            {"name":"Military Press","type":"com"},
+
+            {"name":"Face Pull","type":"iso"},
+
+            {"name":"Upright Row","type":"iso"}
+            
+            ]
+        
+    }
+    ,
+     {"part": "quadricep","exercise":
+
+            [{"name":"Squat","type":"com"},
+
+            {"name":"Leg Extension","type":"iso"},
+
+            {"name":"Front Squat","type":"com"},
+             
+            {"name":"Hack Squat","type":"iso"},
+
+            {"name":"Jump Squat","type":"iso"},
+
+            {"name":"Walking Lunges","type":"iso"},
+             
+             {"name":"Split Squat","type":"iso"},
+
+            {"name":"Barbell Lunge","type":"com"},
+
+            {"name":"Cable Squat","type":"iso"},
+             
+            {"name":"V-Squat","type":"com"}]
+        
+    },{"part": "hamstring","exercise":
+
+            [{"name":"Hyperextension","type":"iso"},
+
+            {"name":"Calf Raise","type":"iso"},
+
+            {"name":"Hip Adduction","type":"iso"},
+             
+            {"name":"Inverse Leg Curl","type":"iso"},
+
+            {"name":"Romanian Deadlift","type":"com"},
+
+            {"name":"Leg Press","type":"iso"},
+             
+             {"name":"Deadlift","type":"com"},
+
+            {"name":"Hamstring Curl","type":"iso"},
+             
+             {"name":"Seated Calf Raise","type":"iso"},
+
+            {"name":"Barbell Raise","type":"iso"}]
+        
+    }
+    ]
+}

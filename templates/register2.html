@@ -1,0 +1,129 @@
+
+
+<nav class="navbar navbar-custom-1" data-ng-init="registerStatus = 'one'"  >
+                    <div class="container-fluid white-border-bottom">
+                        <div class="brand-1 navbar-header">
+                        <a class="brand-font navbar-brand  mx-auto" href="#">Workout Tracker</a>
+                            
+                        </div>
+                        <div class="button-login-1 navbar-body">
+                             <button class="btn btn-custom btn-1 navbar-btn pull-right" type="button" data-ng-click="tologin()">Log In</button>
+                        </div>
+                    </div>
+</nav>
+
+<div class="sign-up-center" data-ng-init="question2disabled = false"></div>
+<div class="container-fluid">
+
+    
+    <div class="row text-center" >
+        <div class="col-md-12">
+            
+            <div class="align-center sign-up">Sign Up</div>
+       
+            
+            <div class="circle-done reg-stat" style="margin:auto;">1</div>
+            <span class="glyphicon glyphicon-chevron-right " style="font-size:16px;"></span>
+            <span class="circle-done reg-stat" >2</span>
+      <!---       <span class="glyphicon glyphicon-chevron-right " style="font-size:16px;"></span>
+            <span class="circle-default reg-stat">3</span>-->
+            
+            <div id="ques-comp" style="padding-top:5%;"  >
+                            
+                <div class="ques-group ">
+                    <p class="questions"> What type of body part split do you like?</p>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" data-ng-click="type='full'" type="button">Full Body Workout</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="type='single'">Single Body Part Split</div>
+                   
+                </div>
+                
+                     <div class="ques-group-hide">
+                <p class="questions ques-group-transition "> How intense do you want your workouts?</p>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="intensity=3">Light</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="intensity=4">Moderate</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="intensity=5">Heavy</div>
+                </div>
+                
+                <div class="ques-group-hide">
+                <p class="questions ques-group-transition "> How many times do you train per week?</p>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="dayfrequency=1">1</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="dayfrequency=2">2</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="dayfrequency=3">3</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="dayfrequency=4">4</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="dayfrequency=5">5</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="dayfrequency=6">6</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="dayfrequency=7">7</div>
+                </div>
+                
+                <div class="ques-group-hide">
+                    <p class="questions ques-group-transition" > How many exercise do you want per session?</p>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=1">1</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=2">2</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=3">3</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=4">4</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=5">5</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=6">6</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=7">7</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=8">8</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=9">9</div>
+                    <div class="ques-btn navbar-btn inline-block btn ques-group-transition" type="button" data-ng-click="frequency=10">10</div>
+                </div>
+                
+                <div class="ques-group-hide" data-ng-init="ques-mult=false">
+                <p class="questions ques-group-transition" > What are the days you train in the week?</p>
+                    
+                    <div class="ques-btn-mult navbar-btn inline-block btn ques-group-transition " data-ng-show="days[0]==false" type="button" data-ng-click="days[0]=true;match()" >Monday</div>
+                    <div class="ques-btn-selected navbar-btn inline-block btn  ques-group-transition" data-ng-show="days[0]==true" type="button" data-ng-click="days[0]=false;match()" >Monday</div>
+                    
+                    <div class="ques-btn-mult navbar-btn inline-block btn ques-group-transition " data-ng-show="days[1]==false" type="button" data-ng-click="days[1]=true;match()">Tuesday</div>
+                    <div class="ques-btn-selected navbar-btn inline-block btn  ques-group-transition" type="button" data-ng-show="days[1]==true" data-ng-click="days[1]=false;match()">Tuesday</div>
+                    
+                    <div class="ques-btn-mult navbar-btn inline-block btn  ques-group-transition" data-ng-show="days[2]==false"type="button" data-ng-click="days[2]=true;match()">Wednesday</div>
+                    <div class="ques-btn-selected navbar-btn inline-block btn  ques-group-transition" data-ng-show="days[2]==true"type="button" data-ng-click="days[2]=false;match()">Wednesday</div>
+                    
+                    <div class="ques-btn-mult navbar-btn inline-block btn ques-group-transition " data-ng-show="days[3]==false"type="button" data-ng-click="days[3]=true;match()">Thursday</div>
+                    <div class="ques-btn-selected navbar-btn inline-block btn  ques-group-transition" data-ng-show="days[3]==true" type="button" data-ng-click="days[3]=false;match()">Thursday</div>
+                    
+                    <div class="ques-btn-mult navbar-btn inline-block btn ques-group-transition " data-ng-show="days[4]==false" type="button" data-ng-click="days[4]=true;match()">Friday</div>
+                    <div class="ques-btn-selected navbar-btn inline-block btn ques-group-transition " data-ng-show="days[4]==true" type="button" data-ng-click="days[4]=false;match()">Friday</div>
+                    
+                    <div class="ques-btn-mult navbar-btn inline-block btn ques-group-transition " data-ng-show="days[5]==false" type="button" data-ng-click="days[5]=true;match()">Saturday</div>
+                       <div class="ques-btn-selected navbar-btn inline-block btn ques-group-transition " data-ng-show="days[5]==true" type="button" data-ng-click="days[5]=false;match()">Saturday</div>
+                    
+                    <div class="ques-btn-mult navbar-btn inline-block btn ques-group-transition " data-ng-show="days[6]==false" type="button" data-ng-click="days[6]=true;match()">Sunday</div>
+                    <div class="ques-btn-selected navbar-btn inline-block btn ques-group-transition " data-ng-show="days[6]==true" type="button" data-ng-click="days[6]=false;match()">Sunday</div>
+                </div>
+                
+                
+                
+            
+                 <div id="btn-next" data-ng-click="checkquestion();" ><div class="btn-2 btn align-center" type="button" data-ng-click="" style="" >Generate workout</div></div>
+                <p style="padding-top:0px;">{{questionwarning}}</p>
+   
+            
+            
+           
+                
+                
+            
+           
+</div>
+        
+        
+        
+        </div>
+    </div>
+
+
+
+    
+
+
+
+<script src="frameworks/js/jquery.js"></script>
+
+
+
+
+
+

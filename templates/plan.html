@@ -1,0 +1,367 @@
+
+
+<nav class="navbar navbar-custom-1" data-ng-init="registerStatus = 'one';">
+                    <div class="container-fluid white-border-bottom">
+                        <div class="brand-1 navbar-header">
+                        <a class="brand-font navbar-brand  mx-auto" data-ng-click="tohomefromtracker()">Workout Tracker</a>
+                            
+                        </div>
+                        <div class="button-login-1 navbar-body">
+                             <span class='navbar-text pull-right' style="font-size:16px;padding-bottom:2%;">Welcome,{{id[0].user_name}}!</span>
+                        </div>
+                    </div>
+</nav>
+<!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add an Exercise</h4>
+        </div>
+        <div class="modal-body">
+         
+        <div class="row">
+            <div class="col-xs-3">
+            
+            <div class="dropdown" data-ng-init="weightpicked='Weights'">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{weightpicked}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">Dropdown header 1</li>
+                  <li data-ng-repeat="i in weightlist"  data-ng-click="saveweight(i)"><a>{{i}}kg</a></li>
+        
+  
+                </ul>
+              </div>
+        </div>
+             
+            <div class="col-xs-3">
+                
+                
+              <div class="dropdown" data-ng-init="setpicked='Sets'">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{setpicked}}
+                <span class="caret"></span></button>
+                 <ul class="dropdown-menu">
+                  <li data-ng-repeat="i in [3,4,5]"  data-ng-click="saveset(i)"><a>{{i}}</a></li>
+                </ul>
+              </div>
+            
+            </div>
+            <div class="col-xs-2 col-md-3">
+                    <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{reppicked}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+             
+                  <li data-ng-repeat="i in [5,8,10,12,15,18,20]" data-ng-click="saverep(i)"><a>{{i}}</a></li>
+      
+               
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-xs-4 col-md-3">
+            <div  class="global-color" class="dropdown" data-ng-init="exercisepicked='Exercise'">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{exercisepicked}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">Chest</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[0].exercise" data-ng-click="saveexercise(i.name)"><a>{{i.name}}</a></li>
+                
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Back</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[1].exercise" data-ng-click="saveexercise(i.name)"><a>{{i.name}}</a></li>
+                
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Bicep</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[2].exercise" data-ng-click="saveexercise(i.name)"><a>{{i.name}}</a></li>
+                
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Tricep</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[3].exercise" data-ng-click="saveexercise(i.name)"><a>{{i.name}}</a></li>
+
+                </ul>
+              </div>
+                </div>
+            
+        </div>
+          </div>
+         
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" data-ng-click="addcustomexerciseatplan()" data-ng-disabled="plankey" >Add Exercise</button>
+           
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+ <!-- Trigger the modal with a button -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Change {{currentplanchange}}</h4>
+        </div>
+        <div class="modal-body" style="padding-bottom:10%;width:100%;">
+              <div data-ng-show="currentplanchanger == 1" >
+                <p>Pick an exercise from our database that you like:</p>
+              <div style="border-color:class="global-color"" class="dropdown" data-ng-init="exercisepicked='Exercise'">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{exercisepicked}}
+                <span class="caret"></span></button>
+
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">Chest</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[0].exercise" data-ng-click="posts[currentplanchangeindex].exercise = i.name;saveexercise(i.name);"><a>{{i.name}}</a></li>
+                
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Back</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[1].exercise" data-ng-click="posts[currentplanchangeindex].exercise = i.name;saveexercise(i.name);"><a>{{i.name}}</a></li>
+                
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Bicep</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[2].exercise" data-ng-click="posts[currentplanchangeindex].exercise = i.name;saveexercise(i.name);"><a>{{i.name}}</a></li>
+                
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Tricep</li>
+                  <li data-ng-repeat="i in workoutdatabase.body[3].exercise" data-ng-click="posts[currentplanchangeindex].exercise = i.name;saveexercise(i.name);"><a>{{i.name}}</a></li>
+
+                </ul>
+              </div>
+               </div>
+
+
+              <div data-ng-show="currentplanchanger ==2">
+              <p>Change the set or rep to suit your exercise:</p>
+              <div class="dropdown inline-block" >
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{setpicked}}
+                <span class="caret"></span></button>
+                 <ul class="dropdown-menu">
+                  <li data-ng-repeat="i in [3,4,5]"  data-ng-click="posts[currentplanchangeindex].set= i;saveset(i);;"><a>{{i}}</a></li>
+                </ul>
+              </div>
+
+              <div class="dropdown inline-block">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{reppicked}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+             
+                  <li data-ng-repeat="i in [5,8,10,12,15,18,20]" data-ng-click="posts[currentplanchangeindex].rep= i;saverep(i)"><a>{{i}}</a></li>
+      
+               
+                </ul>
+              </div>
+             </div>
+
+                   <div data-ng-show="currentplanchanger ==3">
+                 <p>Pick a weight that is suitable for you:</p>
+              <div class="dropdown" data-ng-init="weightpicked='Weights'">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{weightpicked}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">Dropdown header 1</li>
+                  <li data-ng-repeat="i in weightlist"  data-ng-click="posts[currentplanchangeindex].weights = i;saveweight(i);"><a>{{i}}kg</a></li>
+        
+  
+                </ul>
+              </div>
+              </div>
+        </div>
+
+        <div class="modal-footer">
+          <button data-ng-click="" type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Delete Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete this exercise?</p>
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" data-ng-click="changeismadetotrue();posts[tempindex] =null;decrementfrequency() ">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container-fluid" data-ng-init="dayweek= ['mon','tue','wed','thu','fri','sat','sun'];">
+    
+      <div class="row align-center text-center" style="width:90%;border-bottom: 1px solid lightgrey; padding-bottom:3%;padding-top: 2%; margin-bottom:2%;">
+          
+          <div class="col-xs-3" style="color:gray" data-ng-click="tohomefromtracker()"> <span class="m-glyph-return-plan fa fa-arrow-circle-o-left" style="font-size:24px;margin-left:-45%;margin-top:15%;"></span><span style="margin-left:-5%;font-size:20px"> Return</span> </div>
+        <div class="col-xs-6">
+        
+                <p class="h1 m-plan-title" >Workout Plan</p>
+        
+        </div>
+        <div class="col-xs-3"></div>
+    
+    
+    </div>
+    
+
+    <div class="row align-center text-center" style="width:90%;border-bottom: 1px solid lightgrey; padding-bottom:3%;padding-top: 0%; margin-bottom:2%;" data-ng-show="changeismade==true">
+
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-2 ">
+           
+                <div id="btn-next" data-ng-click="delData();addchangedworkout();" ><button  class="btn-2" type="button" style="padding:8%;"   >Save Changes</button></div> 
+
+        
+        </div>
+
+          <div class="col-xs-2 ">
+           
+
+                <div id="btn-next"  ><button data-ng-click="resetplanchanged()" class="btn-2" style="padding:8%;"  type="button"  >Reset</button></div> 
+        
+        </div>
+
+         <div class="col-xs-4">
+        </div>
+    
+    
+    </div>
+ 
+
+    <div data-ng-repeat="n in num" class="row box-shadow  everydaysWorkout" data-ng-show="usertrainingdaysplan[n] == true"> 
+        
+        <div class="row-md-12 " >
+            
+            
+            <div class="row">
+                <div class="col-xs-2">
+                
+                </div>
+                
+                <div class="col-xs-8">
+                  <p class="h1 text-center m-plan-day " style="color:black;">{{fullweek[n]}}</p>
+                </div>
+                
+                <div class="col-xs-2">
+                    <div class="d-display btn btn-2 pull-right"  style="margin-top:18%;margin-right:27%; padding:6%" data-toggle="modal" data-ng-click="settempday(fullweek[n]);"data-target="#myModal1" >Add exercise</div>
+                    <span class="pull-right m-display glyphicon glyphicon-plus-sign" style="margin-top:65%;color:#347AB6;margin-right:27%;font-size:26px" data-toggle="modal" data-ng-click="settempday(fullweek[n])"data-target="#myModal1"></span>
+                </div>
+    
+            </div>
+
+    
+            
+            <div class="row "  >
+                <div class="row-md-12">
+              
+            <table   class="m-table table table-striped text-center table-borderless" style="margin-left:5%;margin-top:2%;margin-bottom:4%;width:90%;" data-ng-init="chest">
+          
+                <thead>
+                  <tr class="text-center ">
+                    <th class=" global-color" style="font-size:23px;">Exercise</th>
+                    <th class=" global-color" style="font-size:23px;">Set and Reps</th>
+                    <th class=" global-color" style="font-size:23px;">Weights</th>
+                  </tr>
+                </thead>
+                
+                <tbody data-ng-init="testhover=0">
+                    
+              
+               
+                    
+                        <tr  data-ng-repeat="post in posts track by $index" data-ng-if="post.user_id == userid && post.day == fullweek[n] && post != null">
+                            <td onmouseover="this.style.background ='darkgrey';" onmouseout="this.style.background ='none'" data-ng-click="modalexercise($index);" data-toggle="modal" data-target="#myModal">{{post.exercise}}</td>
+                            <td onmouseover="this.style.background ='darkgrey'" onmouseout="this.style.background ='none'"data-ng-click="modalsetrep($index);" data-toggle="modal" data-target="#myModal" style="border-left: 4px solid white; border-right:4px solid white;">{{post.set}} x {{post.rep}}</td>
+                            <td disabled="true" onmouseover="this.style.background ='darkgrey'" onmouseout="this.style.background ='none'" data-ng-click="modalweight($index);" data-toggle="modal" data-target="#myModal">{{post.weights}}kg
+                                <span class="pull-right d-display"><button    onmouseout="this.style.background ='none'" onmouseover="this.style.background ='#347AB6'; " style="visibility:hidden; background:none;" class="btn-2 hover-btn-delete" data-ng-click="settempindex($index);settempday(post.day) " data-toggle="modal" data-target="#myModal2" >Del</button></span>
+                                
+                                
+                                
+                           </td>
+                            
+                            
+                            
+                          
+                        </tr>
+                        
+                         
+                    
+                    
+
+                        
+              </table>
+                    
+        
+                  
+            
+                </div>
+            </div>
+            
+        </div>
+    </div>
+ 
+   
+    
+   
+    
+      
+        <div class=" row" style="margin-top:10%;">
+            <div class="col-md-12 intro-footer text-center ">
+            <button class="btn btn-custom intro-btn center-block" type="button">Important Disclaimer</button>
+               <p class="color-white align-center" style="width:80%;">WorkoutTracker.com is singe page application that builds a workout program based on your needs and specification. Corporate sites differ from electronic commerce, portal, or sites in that they provide information to the public about the company rather than transacting business or providing other services.</p>
+               <div >
+                  <a href="#" class="fa fa-facebook color-white footer-icon"></a>
+                  <a href="#" class="fa fa-instagram color-white footer-icon"></a>
+                  <a href="#" class="fa fa-twitter color-white footer-icon"></a>
+                
+                </div>
+            
+            </div>
+            
+        </div>
+    
+ 
+            
+        
+    
+     
+    
+
+            
+            
+          
+</div>
+        
+        
+   
+
+
+    
+
+
+
+
+
+
+
+
+
